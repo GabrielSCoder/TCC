@@ -1,6 +1,6 @@
 # COMO USAR #
 
--Setar as variáveis necessárias listada no arquivo *toSetInShell.txt*
+- Setar as variáveis necessárias listada no arquivo *toSetInShell.txt*
 - Selecionar o tipo de conjunto no arquivo *runner.py*
 - rodar no shell python.exe runner.py
 
