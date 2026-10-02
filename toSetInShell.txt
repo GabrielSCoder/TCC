@@ -1,0 +1,3 @@
+$env:MCP_SCANNER_LLM_MODEL="gemini/gemini-3.1-flash-lite"
+$env:MCP_SCANNER_LLM_TIMEOUT="120"
+$env:MCP_SCANNER_LLM_API_KEY="SUA_CHAVE"
