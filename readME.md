@@ -1,11 +1,12 @@
 # COMO USAR #
 
+- Setar as variáveis necessárias listada no arquivo *toSetInShell.txt*
 - Selecionar o tipo de conjunto no arquivo *runner.py*
 - rodar no shell python.exe runner.py
 
 
 # Avaliar as respostas #
-- Rodar no shell runner.py e navegar pelos menus de informações 
+- Rodar no shell avaliador.py e navegar pelos menus de informações 
 
 # Estrutura #
 
