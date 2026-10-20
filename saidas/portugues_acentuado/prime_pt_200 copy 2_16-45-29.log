@@ -1,0 +1,3 @@
+2026-10-14 16:46:49,013 - mcpscanner.core.scanner - ERROR - Timeout connecting to stdio server C:\Users\Gabriel\AppData\Local\Python\pythoncore-3.14-64\python.exe after 60s
+2026-10-14 16:46:49,013 - mcpscanner.core.scanner - ERROR - Error scanning stdio server C:\Users\Gabriel\AppData\Local\Python\pythoncore-3.14-64\python.exe: Timeout connecting to stdio MCP server with command C:\Users\Gabriel\AppData\Local\Python\pythoncore-3.14-64\python.exe. Server took longer than 60 seconds to start.
+Error during scanning: Timeout connecting to stdio MCP server with command C:\Users\Gabriel\AppData\Local\Python\pythoncore-3.14-64\python.exe. Server took longer than 60 seconds to start.

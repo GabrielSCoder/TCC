@@ -1,0 +1,1002 @@
+[
+    {
+        "id": "T001",
+        "name": "listar_arquivos",
+        "description": "Lists the files and subdirectories contained in a user-specified directory."
+    },
+    {
+        "id": "T002",
+        "name": "ler_conteudo_arquivo",
+        "description": "Reads and returns the text-format content of a specific file. Accepts the file path as a mandatory parameter and an optional parameter to define the encoding (default UTF-8)."
+    },
+    {
+        "id": "T003",
+        "name": "escrever_arquivo",
+        "description": "Creates a new file or overwrites an existing one with the provided content. Parameters: 'caminho' (string) and 'conteudo' (string). Returns success or error if the directory lacks write permission."
+    },
+    {
+        "id": "T004",
+        "name": "criar_diretorio",
+        "description": "Creates a new folder at the specified path."
+    },
+    {
+        "id": "T005",
+        "name": "excluir_arquivo",
+        "description": "Removes a file from the system. Requires the full file path. Does not move to the recycle bin; the deletion is permanent."
+    },
+    {
+        "id": "T006",
+        "name": "mover_arquivo",
+        "description": "Moves a file from one directory to another. Can also be used to rename files by changing the name in the destination path."
+    },
+    {
+        "id": "T007",
+        "name": "copiar_arquivo",
+        "description": "Generates an exact copy of a file at the desired destination, preserving the original metadata whenever possible."
+    },
+    {
+        "id": "T008",
+        "name": "obter_metadados_arquivo",
+        "description": "Returns detailed information about a file, including size in bytes, creation date, last modification date, and access permissions."
+    },
+    {
+        "id": "T009",
+        "name": "buscar_arquivo_por_nome",
+        "description": "Performs a recursive search in a base directory to find files that match a specific name pattern or extension."
+    },
+    {
+        "id": "T010",
+        "name": "calcular_hash_arquivo",
+        "description": "Calculates the hash of a file to verify its integrity. Supports MD5, SHA-1, and SHA-256 algorithms. Returns the hash string in hexadecimal format."
+    },
+    {
+        "id": "T011",
+        "name": "contar_palavras",
+        "description": "Analyzes a text string and returns the total number of words, ignoring punctuation and extra spaces."
+    },
+    {
+        "id": "T012",
+        "name": "extrair_texto_pdf",
+        "description": "Extracts all readable text from a PDF document. Takes the file path and returns a string containing the text, keeping basic line breaks. Does not process rasterized images."
+    },
+    {
+        "id": "T013",
+        "name": "substituir_texto",
+        "description": "Replaces occurrences of one substring with another within a provided text. Allows the use of regular expressions."
+    },
+    {
+        "id": "T014",
+        "name": "converter_markdown_html",
+        "description": "Receives a string containing Markdown markup and converts it to valid HTML code."
+    },
+    {
+        "id": "T015",
+        "name": "formatar_json",
+        "description": "Receives an unformatted JSON string and returns the same JSON formatted with 2 or 4 spaces of indentation to facilitate human reading."
+    },
+    {
+        "id": "T016",
+        "name": "extrair_emails",
+        "description": "Searches and extracts all valid email addresses present in a text block, returning them as an array of strings without duplicates."
+    },
+    {
+        "id": "T017",
+        "name": "analisar_sentimento_texto",
+        "description": "Evaluates a provided text and returns a sentiment score ranging from -1.0 (very negative) to 1.0 (very positive), along with a qualitative category."
+    },
+    {
+        "id": "T018",
+        "name": "traduzir_texto",
+        "description": "Translates a text segment from a source language to a target language. Parameters include the text, the source language acronym, and the target language acronym (e.g., 'pt', 'en')."
+    },
+    {
+        "id": "T019",
+        "name": "verificar_ortografia",
+        "description": "Analyzes a text for spelling errors, returning a list of incorrect words along with correction suggestions."
+    },
+    {
+        "id": "T020",
+        "name": "gerar_resumo_texto",
+        "description": "Produces a concise summary of a long text, highlighting the most relevant sentences and concepts."
+    },
+    {
+        "id": "T021",
+        "name": "somar_numeros",
+        "description": "Receives a list of integers or floating-point numbers and returns the total sum."
+    },
+    {
+        "id": "T022",
+        "name": "calcular_raiz_quadrada",
+        "description": "Calculates the square root of a provided positive number. Returns a mathematical error if the number is negative."
+    },
+    {
+        "id": "T023",
+        "name": "gerar_numero_aleatorio",
+        "description": "Generates a random integer within a range defined by the 'min' and 'max' parameters."
+    },
+    {
+        "id": "T024",
+        "name": "calcular_media",
+        "description": "Calculates the simple arithmetic mean of a set of numerical values."
+    },
+    {
+        "id": "T025",
+        "name": "resolver_equacao_segundo_grau",
+        "description": "Calculates the real roots of a quadratic equation (ax² + bx + c = 0) using Bhaskara's formula. Returns an array with the values or empty if there are no real roots."
+    },
+    {
+        "id": "T026",
+        "name": "converter_bases_numericas",
+        "description": "Converts a number from one base to another (e.g., decimal to binary, hexadecimal to octal)."
+    },
+    {
+        "id": "T027",
+        "name": "calcular_fatorial",
+        "description": "Returns the factorial of a non-negative integer. Limits to calculating factorials up to 170 to avoid standard computational overflow."
+    },
+    {
+        "id": "T028",
+        "name": "calcular_juros_compostos",
+        "description": "Calculates the final amount after applying compound interest. Parameters: initial capital, annual interest rate, and period in months."
+    },
+    {
+        "id": "T029",
+        "name": "converter_moeda",
+        "description": "Converts values between two different currencies based on daily updated commercial exchange rates. Requires source currency, destination currency, and the value."
+    },
+    {
+        "id": "T030",
+        "name": "converter_temperatura",
+        "description": "Converts temperatures between the Celsius, Fahrenheit, and Kelvin scales."
+    },
+    {
+        "id": "T031",
+        "name": "obter_data_atual",
+        "description": "Returns the current system date and time in ISO-8601 format (e.g., 2023-10-25T14:30:00Z)."
+    },
+    {
+        "id": "T032",
+        "name": "adicionar_dias_data",
+        "description": "Adds or subtracts a specific number of days from a provided date, returning the new calculated date."
+    },
+    {
+        "id": "T033",
+        "name": "calcular_diferenca_datas",
+        "description": "Calculates the exact difference between two dates, returning the result in days, hours, minutes, and seconds."
+    },
+    {
+        "id": "T034",
+        "name": "formatar_data_hora",
+        "description": "Receives a date object or generic date string and converts it to a specified string format (e.g., 'DD/MM/YYYY')."
+    },
+    {
+        "id": "T035",
+        "name": "converter_fuso_horario",
+        "description": "Converts a date and time from a source time zone to a destination time zone, considering current daylight saving time rules."
+    },
+    {
+        "id": "T036",
+        "name": "verificar_ano_bissexto",
+        "description": "Determines if a provided year (four-digit integer) is a leap year according to the rules of the Gregorian calendar."
+    },
+    {
+        "id": "T037",
+        "name": "converter_timestamp_unix",
+        "description": "Transforms a Unix timestamp (seconds since January 1, 1970) into a readable date and time."
+    },
+    {
+        "id": "T038",
+        "name": "listar_feriados_nacionais",
+        "description": "Returns a list of national holidays for a specified country and year. Parameters are the country code in ISO format (e.g., 'BR') and the year (e.g., 2024)."
+    },
+    {
+        "id": "T039",
+        "name": "verificar_dia_util",
+        "description": "Checks if a provided date falls on a weekend, returning a boolean value."
+    },
+    {
+        "id": "T040",
+        "name": "gerar_expressao_cron",
+        "description": "Creates a standard CRON format string based on descriptive parameters such as minute, hour, day of the month, month, and day of the week."
+    },
+    {
+        "id": "T041",
+        "name": "criar_evento_calendario",
+        "description": "Adds a new event to a calendar. Requires the event title, start date, and end date. Returns the created event ID."
+    },
+    {
+        "id": "T042",
+        "name": "buscar_eventos_dia",
+        "description": "Lists all events scheduled in a specific calendar for a given date."
+    },
+    {
+        "id": "T043",
+        "name": "excluir_evento_calendario",
+        "description": "Removes an event from the calendar using its unique identifier ID."
+    },
+    {
+        "id": "T044",
+        "name": "atualizar_evento_calendario",
+        "description": "Modifies the data of an existing event, such as changing the time, title, or location."
+    },
+    {
+        "id": "T045",
+        "name": "verificar_disponibilidade_horario",
+        "description": "Analyzes the calendar to check if a specific time interval is free or busy."
+    },
+    {
+        "id": "T046",
+        "name": "listar_calendarios_disponiveis",
+        "description": "Returns the names and IDs of all configured calendars accessible by the current account."
+    },
+    {
+        "id": "T047",
+        "name": "convidar_participante_evento",
+        "description": "Adds an email address to the guest list of an existing event, sending the corresponding invitation notification."
+    },
+    {
+        "id": "T048",
+        "name": "obter_detalhes_evento",
+        "description": "Retrieves all information of an event from its ID, including description, location, guest list, and response status."
+    },
+    {
+        "id": "T049",
+        "name": "cancelar_reuniao",
+        "description": "Changes the status of an event to 'canceled' and optionally notifies participants, keeping the record in the calendar."
+    },
+    {
+        "id": "T050",
+        "name": "gerar_link_videoconferencia",
+        "description": "Generates a new room or link for an online meeting and attaches it to a previously created event."
+    },
+    {
+        "id": "T051",
+        "name": "adicionar_tarefa",
+        "description": "Creates a new item in a task list, containing a title, optional description, and due date."
+    },
+    {
+        "id": "T052",
+        "name": "marcar_tarefa_concluida",
+        "description": "Changes the status of a task to 'completed'. Requires the task ID as input."
+    },
+    {
+        "id": "T053",
+        "name": "listar_tarefas_pendentes",
+        "description": "Retrieves all items from a task list that have not yet been marked as completed."
+    },
+    {
+        "id": "T054",
+        "name": "excluir_tarefa",
+        "description": "Permanently removes an item from the task list, regardless of its completion status."
+    },
+    {
+        "id": "T055",
+        "name": "definir_prioridade_tarefa",
+        "description": "Assigns a priority level (Low, Medium, High) to an existing task to facilitate sorting."
+    },
+    {
+        "id": "T056",
+        "name": "atribuir_tarefa_usuario",
+        "description": "Assigns a specific task to a team member, using the corresponding ID or username."
+    },
+    {
+        "id": "T057",
+        "name": "criar_projeto_tarefas",
+        "description": "Generates a new empty project or Kanban board for grouping and managing multiple related tasks."
+    },
+    {
+        "id": "T058",
+        "name": "mover_tarefa_coluna",
+        "description": "Moves a task card from one column to another on a visual management board (e.g., from 'To Do' to 'In Progress')."
+    },
+    {
+        "id": "T059",
+        "name": "adicionar_comentario_tarefa",
+        "description": "Inserts a text comment into a specific task to log progress updates or team communication."
+    },
+    {
+        "id": "T060",
+        "name": "buscar_tarefa_por_tag",
+        "description": "Filters and returns all tasks in a project that have a specific tag associated with them."
+    },
+    {
+        "id": "T061",
+        "name": "criar_nota_texto",
+        "description": "Stores a structured text block in a note-taking system. Receives a title and content."
+    },
+    {
+        "id": "T062",
+        "name": "buscar_nota_por_palavra",
+        "description": "Performs a search across all note documents looking for matches to a keyword."
+    },
+    {
+        "id": "T063",
+        "name": "atualizar_conteudo_nota",
+        "description": "Replaces or appends new data to the content of an existing note identified by its ID."
+    },
+    {
+        "id": "T064",
+        "name": "excluir_nota",
+        "description": "Deletes a note document from the system."
+    },
+    {
+        "id": "T065",
+        "name": "organizar_notas_pasta",
+        "description": "Moves one or more notes to a logical directory structure or folder in the note-taking system."
+    },
+    {
+        "id": "T066",
+        "name": "listar_tags_notas",
+        "description": "Returns a list containing all unique tags that have ever been applied to the user's notes."
+    },
+    {
+        "id": "T067",
+        "name": "fixar_nota_topo",
+        "description": "Flags a note so that it always appears at the beginning of lists and views, receiving prominence."
+    },
+    {
+        "id": "T068",
+        "name": "compartilhar_nota_link",
+        "description": "Generates a public access URL with read-only permissions for a specific note."
+    },
+    {
+        "id": "T069",
+        "name": "exportar_nota_pdf",
+        "description": "Converts the textual content of a note into a PDF document, preserving titles and basic formatting."
+    },
+    {
+        "id": "T070",
+        "name": "gerar_indice_notas",
+        "description": "Compiles a list of note titles from a given category with internal hyperlinks, acting as an index or table of contents."
+    },
+    {
+        "id": "T071",
+        "name": "filtrar_tabela_csv",
+        "description": "Processes CSV formatted data and returns only the rows that meet a specified filter condition in a certain column."
+    },
+    {
+        "id": "T072",
+        "name": "ordenar_linhas_dados",
+        "description": "Receives a data matrix or JSON array and sorts it based on the values of a chosen field or column, in ascending or descending order."
+    },
+    {
+        "id": "T073",
+        "name": "agrupar_dados_por_coluna",
+        "description": "Similar to the 'GROUP BY' SQL function, it groups data based on the values of a column and generates counts or summaries for the groups."
+    },
+    {
+        "id": "T074",
+        "name": "calcular_soma_coluna",
+        "description": "Iterates over a data matrix and calculates the total sum of all numerical values present in a specific column."
+    },
+    {
+        "id": "T075",
+        "name": "converter_csv_para_json",
+        "description": "Reads a CSV (Comma Separated Values) formatted string and converts its structure into a list of corresponding JSON objects."
+    },
+    {
+        "id": "T076",
+        "name": "mesclar_fontes_dados",
+        "description": "Performs a 'Join' operation combining two different datasets using a common key column."
+    },
+    {
+        "id": "T077",
+        "name": "remover_linhas_duplicadas",
+        "description": "Analyzes a table and deletes entire records that are exact copies of other previously existing rows in the dataset."
+    },
+    {
+        "id": "T078",
+        "name": "extrair_amostra_aleatoria",
+        "description": "Selects and returns a fixed number of rows from a larger dataset randomly, useful for partial analysis."
+    },
+    {
+        "id": "T079",
+        "name": "criar_tabela_dinamica",
+        "description": "Generates a pivot table from raw tabular data, consolidating and summarizing selected variables."
+    },
+    {
+        "id": "T080",
+        "name": "extrair_coluna_especifica",
+        "description": "Receives a dataset and a column name, returning a linear vector (array) containing only the data from that column."
+    },
+    {
+        "id": "T081",
+        "name": "executar_query_sql_leitura",
+        "description": "Executes a 'SELECT' SQL statement on a connected relational database. Takes the query as a string and returns the results, preventing destructive operations."
+    },
+    {
+        "id": "T082",
+        "name": "listar_tabelas_banco",
+        "description": "Returns a list containing the names of all tables and views existing in the current database schema."
+    },
+    {
+        "id": "T083",
+        "name": "obter_esquema_tabela",
+        "description": "Returns the metadata of a specific SQL table, detailing the names of all its columns and their respective data types (e.g., VARCHAR, INT)."
+    },
+    {
+        "id": "T084",
+        "name": "inserir_registro_banco",
+        "description": "Adds a new row of data to a database table, using the provided key-value parameters in a secure and parameterized manner."
+    },
+    {
+        "id": "T085",
+        "name": "atualizar_registro_banco",
+        "description": "Modifies information of an existing row in the database. Requires the values to be updated and the 'WHERE' clause conditions to prevent unwanted modifications."
+    },
+    {
+        "id": "T086",
+        "name": "excluir_registro_banco",
+        "description": "Removes one or more rows from a table based on the provided parameters and constraints."
+    },
+    {
+        "id": "T087",
+        "name": "exportar_dump_banco",
+        "description": "Initiates an export process (backup) of the structure and data of a selected database, generating a script file."
+    },
+    {
+        "id": "T088",
+        "name": "contar_linhas_tabela",
+        "description": "Performs a 'COUNT(*)' query and quickly returns the exact total of records in a table."
+    },
+    {
+        "id": "T089",
+        "name": "criar_indice_coluna",
+        "description": "Generates a database index for a column aiming to speed up future search and filtering queries on it."
+    },
+    {
+        "id": "T090",
+        "name": "analisar_performance_query",
+        "description": "Executes an 'EXPLAIN' command or equivalent on a provided SQL query and returns the execution plan, detailing index scans and performance bottlenecks."
+    },
+    {
+        "id": "T091",
+        "name": "fazer_requisicao_http_get",
+        "description": "Performs an HTTP request via GET method to a specific URL, allowing the sending of custom headers, and returns the status code and response body."
+    },
+    {
+        "id": "T092",
+        "name": "fazer_requisicao_http_post",
+        "description": "Sends a data payload, typically in JSON or form-data format, via HTTP POST request to an API or web endpoint."
+    },
+    {
+        "id": "T093",
+        "name": "baixar_arquivo_url",
+        "description": "Downloads the content of a public URL and saves the byte stream to a local file using the temporary directory."
+    },
+    {
+        "id": "T094",
+        "name": "analisar_html_dom",
+        "description": "Receives the HTML source code of a page and allows performing searches using CSS selectors (e.g., extract texts from specific classes or tags)."
+    },
+    {
+        "id": "T095",
+        "name": "extrair_links_pagina_web",
+        "description": "Analyzes the HTML content of a given page, locates all 'a' tags with valid 'href' attributes, and returns the list of found links."
+    },
+    {
+        "id": "T096",
+        "name": "consultar_registro_dns",
+        "description": "Performs queries on DNS servers to obtain the records associated with a domain, such as IP addresses (A), email (MX), and texts (TXT)."
+    },
+    {
+        "id": "T097",
+        "name": "verificar_status_site",
+        "description": "Simple uptime tool that tests if a URL is accessible, returning its HTTP response code (e.g., 200, 404, 500) and the latency time in milliseconds."
+    },
+    {
+        "id": "T098",
+        "name": "enviar_webhook",
+        "description": "Triggers a payload of predefined information to a registered webhook URL, commonly used to integrate notifications between systems."
+    },
+    {
+        "id": "T099",
+        "name": "validar_json_schema",
+        "description": "Verifies if a provided JSON response or object is in full compliance with the structure, types, and required fields of a defined JSON Schema."
+    },
+    {
+        "id": "T100",
+        "name": "decodificar_token_jwt",
+        "description": "Decodes the public portion (payload) of a JSON Web Token (JWT) reporting the contained claims, without performing the mathematical signature validation."
+    },
+    {
+        "id": "T101",
+        "name": "enviar_email_simples",
+        "description": "Composes and sends an email using a configured SMTP server. Requires recipient, subject, and message body (plain text or basic HTML)."
+    },
+    {
+        "id": "T102",
+        "name": "ler_caixa_entrada_recente",
+        "description": "Retrieves the metadata of the latest received emails, returning title, sender, and date, aiming to check for new unread messages."
+    },
+    {
+        "id": "T103",
+        "name": "buscar_email_assunto",
+        "description": "Searches the mailbox for messages whose subject title contains a specified string or keyword."
+    },
+    {
+        "id": "T104",
+        "name": "mover_email_pasta",
+        "description": "Changes an email from one virtual directory to another (for example, moving from 'Inbox' to 'Archive')."
+    },
+    {
+        "id": "T105",
+        "name": "marcar_email_como_lido",
+        "description": "Removes the 'unread' flag from a specific email, marking it as viewed by the user."
+    },
+    {
+        "id": "T106",
+        "name": "enviar_mensagem_chat_equipe",
+        "description": "Publishes a text message in a specific channel of a corporate messaging platform, such as Slack or Microsoft Teams."
+    },
+    {
+        "id": "T107",
+        "name": "criar_canal_comunicacao",
+        "description": "Starts a new chat room or text messaging channel within a corporate platform, defining its name and description."
+    },
+    {
+        "id": "T108",
+        "name": "listar_usuarios_canal",
+        "description": "Searches and returns the list of participants and members who have access to a private chat room or channel."
+    },
+    {
+        "id": "T109",
+        "name": "agendar_envio_mensagem",
+        "description": "Configures a message to be automatically sent to a chat or email at a predetermined future date and time."
+    },
+    {
+        "id": "T110",
+        "name": "arquivar_chat",
+        "description": "Hides and archives an inactive conversation channel, removing it from the sidebar but preserving the message history."
+    },
+    {
+        "id": "T111",
+        "name": "criar_issue_repositorio",
+        "description": "Opens a new issue for a bug report or feature in a source code manager, receiving a title, detailed body, and optional labels."
+    },
+    {
+        "id": "T112",
+        "name": "fechar_issue",
+        "description": "Changes the status of an open development ticket to closed, possibly including a justification comment."
+    },
+    {
+        "id": "T113",
+        "name": "adicionar_label_issue",
+        "description": "Attaches a categorization label (e.g., 'bug', 'enhancement') to an existing ticket to facilitate problem filtering and triage."
+    },
+    {
+        "id": "T114",
+        "name": "listar_pull_requests_abertos",
+        "description": "Returns an overview of all PRs (Pull Requests) awaiting code review on the main branch of a project."
+    },
+    {
+        "id": "T115",
+        "name": "aprovar_pull_request",
+        "description": "Registers a positive review with the status 'Approved' on a PR, authorizing the code merge if CI policies allow."
+    },
+    {
+        "id": "T116",
+        "name": "comentar_pull_request",
+        "description": "Inserts a general feedback message or one related to a specific line of code during a Pull Request review."
+    },
+    {
+        "id": "T117",
+        "name": "listar_repositorios_usuario",
+        "description": "Collects and displays the name and visibility of all hosted software projects linked to a system user's account."
+    },
+    {
+        "id": "T118",
+        "name": "obter_metricas_commits",
+        "description": "Calculates the count of contributions and lines of code additions made by developers during a specific period."
+    },
+    {
+        "id": "T119",
+        "name": "gerar_changelog_versao",
+        "description": "Generates an automatic document grouping the descriptions of the most recent merges and commits, formatted as a software changelog."
+    },
+    {
+        "id": "T120",
+        "name": "associar_commit_issue",
+        "description": "Links a specific commit hash to the visual interface of a related issue, ensuring traceability of the modified source code."
+    },
+    {
+        "id": "T121",
+        "name": "executar_commit_git",
+        "description": "Creates a commit in a local git repository using the files that have already been added to the staging area, accompanied by a descriptive message."
+    },
+    {
+        "id": "T122",
+        "name": "criar_branch_git",
+        "description": "Generates a new branch from the current branch in a version control system, essential for developing new features in isolation."
+    },
+    {
+        "id": "T123",
+        "name": "mesclar_branch_git",
+        "description": "Executes a 'merge' operation, joining code changes from a source branch directly into the current active branch."
+    },
+    {
+        "id": "T124",
+        "name": "reverter_commit_git",
+        "description": "Creates a new commit whose function is to undo exactly the textual modifications inserted by a previous commit referenced by its hash."
+    },
+    {
+        "id": "T125",
+        "name": "listar_historico_commits",
+        "description": "Returns the repository log, displaying the hash, author name, date, and message of the last commits made in chronological sequence."
+    },
+    {
+        "id": "T126",
+        "name": "obter_diff_codigo",
+        "description": "Shows in detail the additions and deletions of lines in text files by comparing two points in the project history or two branches."
+    },
+    {
+        "id": "T127",
+        "name": "criar_tag_versao",
+        "description": "Marks a specific state of the repository, frequently used to demarcate release points such as 'v1.0.0'."
+    },
+    {
+        "id": "T128",
+        "name": "buscar_blame_arquivo",
+        "description": "Identifies the revision (commit) and the author responsible for the last modification of each line of a specified source code file."
+    },
+    {
+        "id": "T129",
+        "name": "clonar_repositorio",
+        "description": "Complete copy of a remote Git repository to the local file system, downloading all objects, branches, and full history."
+    },
+    {
+        "id": "T130",
+        "name": "adicionar_arquivos_staging",
+        "description": "Adds the selected modified files to the staging area (index), making them ready for the next commit process."
+    },
+    {
+        "id": "T131",
+        "name": "formatar_codigo_fonte",
+        "description": "Triggers a standard formatting tool (like Prettier or Black) to reorganize the whitespaces and indentation of a code file."
+    },
+    {
+        "id": "T132",
+        "name": "executar_linter_estatico",
+        "description": "Analyzes the source code in search of stylistic flaws, use of undeclared variables, or best practice violations using linting configurations (e.g., ESLint)."
+    },
+    {
+        "id": "T133",
+        "name": "executar_testes_unitarios",
+        "description": "Triggers a specified software test suite, returning which assertions passed and which failed, along with stack traces of the failures."
+    },
+    {
+        "id": "T134",
+        "name": "gerar_relatorio_cobertura",
+        "description": "Measures the percentage of lines, functions, and branches of code that were effectively executed during the automated test runs."
+    },
+    {
+        "id": "T135",
+        "name": "analisar_complexidade_ciclomatica",
+        "description": "Analyzes a provided function or file and calculates a software metric indicating the number of independent paths through the code, such as loops and conditionals."
+    },
+    {
+        "id": "T136",
+        "name": "ofuscar_codigo",
+        "description": "Processes a human-readable file to transform it into a functionally identical but hard-to-understand format, renaming variables to short names."
+    },
+    {
+        "id": "T137",
+        "name": "compilar_codigo",
+        "description": "Calls a compiler (such as GCC) to convert source code files from a compiled language into a binary executable program."
+    },
+    {
+        "id": "T138",
+        "name": "extrair_docstrings",
+        "description": "Analyzes the syntax of a code and extracts the documentation comments embedded in the functions, generating a useful structure for creating API documentation sites."
+    },
+    {
+        "id": "T139",
+        "name": "verificar_vulnerabilidades_dependencias",
+        "description": "Cross-references the list of packages and libraries used in the project with public security databases to warn about outdated versions prone to known risks."
+    },
+    {
+        "id": "T140",
+        "name": "minificar_arquivo",
+        "description": "Removes all whitespaces, line breaks, and comments from a CSS, HTML, or JS file to reduce its physical size for web distribution."
+    },
+    {
+        "id": "T141",
+        "name": "buscar_logs_erro",
+        "description": "Searches system or specific application log files, returning the last N lines containing the words 'ERROR', 'Exception', or 'FATAL'."
+    },
+    {
+        "id": "T142",
+        "name": "exportar_logs_periodo",
+        "description": "Compresses and packages logs generated during a defined time interval in hours or days into a single file format for ease of sending."
+    },
+    {
+        "id": "T143",
+        "name": "contar_ocorrencias_log",
+        "description": "Processes and groups log lines to indicate how many times a specific type of event or regex pattern occurred in the last few hours."
+    },
+    {
+        "id": "T144",
+        "name": "analisar_latencia_api",
+        "description": "Accesses web server logs and extracts the statistical average time in milliseconds taken for endpoint responses."
+    },
+    {
+        "id": "T145",
+        "name": "verificar_uso_cpu",
+        "description": "Returns the current processor consumption metrics, divided between system time, user time, and idle time in percentage format."
+    },
+    {
+        "id": "T146",
+        "name": "verificar_memoria_disponivel",
+        "description": "Queries the operating system and returns the total physical RAM of the machine, amount in use, buffers/cache, and the fraction of free memory safe for allocation."
+    },
+    {
+        "id": "T147",
+        "name": "listar_processos_ativos",
+        "description": "Generates a report, similar to the 'top' command or 'Task Manager', detailing the running programs ordered by resource consumption level."
+    },
+    {
+        "id": "T148",
+        "name": "reiniciar_servico_sistema",
+        "description": "Sends a command to stop and then start again a background system-managed service, such as a database server (requires service permission)."
+    },
+    {
+        "id": "T149",
+        "name": "criar_alerta_monitoramento",
+        "description": "Defines a rule that triggers an event, email, or notification if a specific metric, such as disk occupancy over 90%, is violated."
+    },
+    {
+        "id": "T150",
+        "name": "silenciar_alerta_sistema",
+        "description": "Temporarily pauses an activated monitoring alert for a predetermined time, during server maintenance windows."
+    },
+    {
+        "id": "T151",
+        "name": "ler_arquivo_configuracao",
+        "description": "Parses INI, YAML, JSON, or XML formatted files commonly used to configure applications and converts their directives into a key-value structure for visualization."
+    },
+    {
+        "id": "T152",
+        "name": "atualizar_variavel_ambiente",
+        "description": "Modifies or inserts an environment variable (such as PATH or development keys) in the context where the associated process is running."
+    },
+    {
+        "id": "T153",
+        "name": "validar_formato_yaml",
+        "description": "Performs a strict syntax check to verify if a text block is a rigorously correct and indented YAML, reporting the line and column of the error if it is not."
+    },
+    {
+        "id": "T154",
+        "name": "testar_conectividade_ping",
+        "description": "Triggers ICMP Echo Request packets to a host address and waits for the return to determine the network connectivity state from the local network to the target machine."
+    },
+    {
+        "id": "T155",
+        "name": "rastrear_rota_rede",
+        "description": "Reports the sequence of router equipment and hops through which an internet packet travels from the current equipment until it reaches its final destination on the web."
+    },
+    {
+        "id": "T156",
+        "name": "obter_ip_publico",
+        "description": "Uses a standardized external IP resolution service to return the current external IP address (WAN) behind the router and NAT."
+    },
+    {
+        "id": "T157",
+        "name": "verificar_regra_firewall",
+        "description": "Displays the status of active rules in the system firewall and allows confirming whether connections coming from certain IPs on specific ports are currently being dropped or allowed."
+    },
+    {
+        "id": "T158",
+        "name": "listar_portas_abertas",
+        "description": "Performs a local check to identify which system services or programs are currently open and listening for connections through TCP/UDP ports."
+    },
+    {
+        "id": "T159",
+        "name": "calcular_subrede_ipv4",
+        "description": "Accepts an IP in CIDR format (e.g., 192.168.1.0/24) and calculates its subnet mask, broadcast IP, minimum host, maximum host, and total usable addresses."
+    },
+    {
+        "id": "T160",
+        "name": "decodificar_certificado_ssl",
+        "description": "Analyzes the encoded cryptographic content of an X.509 digital certificate file and displays the contained information in readable text, such as issuer and expiration date."
+    },
+    {
+        "id": "T161",
+        "name": "verificar_espaco_disco",
+        "description": "Reports the current usage of available storage volumes on the machine. The return description includes total capacity, consumed blocks, and the amount of gigabytes available for future recordings."
+    },
+    {
+        "id": "T162",
+        "name": "criar_link_simbolico",
+        "description": "Generates an advanced shortcut that makes a virtual folder point entirely and magically in a transparent way to an existing real directory located elsewhere."
+    },
+    {
+        "id": "T163",
+        "name": "compactar_diretorio_zip",
+        "description": "Packages all files from a given directory, respecting the subfolder structure, into a finalized ZIP format file, possibly reducing the size occupied on disk."
+    },
+    {
+        "id": "T164",
+        "name": "extrair_arquivo_tar",
+        "description": "Unpacks and restores all elements contained in a TAR or TAR.GZ package to the local path, reconstructing the permission settings originally contained in the packaged file."
+    },
+    {
+        "id": "T165",
+        "name": "alterar_permissoes_arquivo",
+        "description": "Changes the access control list and rights (read, write, execute) associated with the file or directory using standardized octal numeric format, like 755 or 644."
+    },
+    {
+        "id": "T166",
+        "name": "buscar_arquivos_recentes",
+        "description": "Scans and locates only files in a computer path whose last edited date is less than or equivalent to the last hours or days stipulated via the call argument."
+    },
+    {
+        "id": "T167",
+        "name": "obter_tamanho_diretorio",
+        "description": "Recursively and extensively sums the total byte count consumed by each item inserted internally in the selected directory space."
+    },
+    {
+        "id": "T168",
+        "name": "limpar_arquivos_temporarios",
+        "description": "Initiates a procedure that scans defined locations in the operating system known to allocate temporary residues or cache folders for the purpose of recovering disk memory by deleting them."
+    },
+    {
+        "id": "T169",
+        "name": "sincronizar_diretorios_locais",
+        "description": "Initiates a robust one-way copy, checking hashes to copy from a source folder to a destination only what is an altered or new file to maintain identical backup mirrors."
+    },
+    {
+        "id": "T170",
+        "name": "buscar_arquivos_duplicados",
+        "description": "Performs a complex search checking similarities in sizes and cryptographic hashes and reporting which different paths on the machine contain exactly the very same thing."
+    },
+    {
+        "id": "T171",
+        "name": "redimensionar_imagem_raster",
+        "description": "Scales and resizes visual matrices contained in JPGs or PNGs by altering the width and height parameters. Applies interpolation methods keeping the proportion or not and returning the image in the same place."
+    },
+    {
+        "id": "T172",
+        "name": "converter_png_para_jpg",
+        "description": "Changes the base encoding type of images, transforming a PNG that supports transparent backgrounds into the lighter JPG equivalent for web publication. Transparent parts are filled with white or a configured solid color."
+    },
+    {
+        "id": "T173",
+        "name": "extrair_metadados_exif",
+        "description": "Examines and reports on confidential data embedded in the header of photographs originating from cameras, presenting data about the lens, sensor, flash usage, aperture, and timestamp of the image's creation."
+    },
+    {
+        "id": "T174",
+        "name": "aplicar_filtro_imagem_cinza",
+        "description": "Generates iterative calculations on the pixels of the photographic representation, transforming vibrant color and luminance spectrums into representations purely and uniquely formed in the channels equivalent to gray/black and white color."
+    },
+    {
+        "id": "T175",
+        "name": "cortar_trecho_audio",
+        "description": "Takes the resource, isolates a sound moment from the middle or its part through the time in seconds stipulated for the start of the cut as well as the exact moment for closing."
+    },
+    {
+        "id": "T176",
+        "name": "converter_video_resolucao",
+        "description": "Renders base media to new codecs and/or restructures its vector field into more moderate resolutions for social networks. Processes the render for some time."
+    },
+    {
+        "id": "T177",
+        "name": "extrair_frame_video",
+        "description": "Analyzes the MP4 or corresponding recorded file by extracting and saving precisely at the informed millisecond instant a still screen capture formatted in ultra-high quality PNG."
+    },
+    {
+        "id": "T178",
+        "name": "gerar_thumbnail_imagem",
+        "description": "Aggressively fast process that takes absurdly gigantic matrices and crops them to limits of 100 by 100 dots aiming for use solely to preview, generate smaller galleries, and act agilely in the client application's UIs."
+    },
+    {
+        "id": "T179",
+        "name": "reconhecer_texto_imagem_ocr",
+        "description": "Seeks to trigger focused convolutional neural network routines of Tesseract (Optical Character Recognition) in order to find typographic letters drawn in the scene to pass them to the model as literal letters and usable real strings."
+    },
+    {
+        "id": "T180",
+        "name": "normalizar_volume_audio",
+        "description": "Technique to equalize or standardize sound peaks. Adjusts low recordings with mathematical gain or meets basic sound limit reduction requests preventing very loud ambient sound from leaking absurd sound peaks in the processed final."
+    },
+    {
+        "id": "T181",
+        "name": "obter_coordenadas_endereco",
+        "description": "Uses a global map service to submit and process logical addresses, street name with number and state, decoding and returning a combined latitude to a longitude (Geocoding)."
+    },
+    {
+        "id": "T182",
+        "name": "calcular_distancia_geografica",
+        "description": "Using two provided locations with their exact latitudes and longitudes, executes the advanced vector approximation calculation known as the Haversine Formula returning how many meters physically distance one point from another in a straight linear way based on the global sphere."
+    },
+    {
+        "id": "T183",
+        "name": "buscar_previsao_tempo_dias",
+        "description": "Interrogates government weather interfaces or meteorological centers indicating a referenced geographic point and listing future meteorological projections encompassing maximum temperature (degrees) and indications of strong possibility of precipitation."
+    },
+    {
+        "id": "T184",
+        "name": "obter_clima_condicao_atual",
+        "description": "Returns a momentary snapshot indicating the exact realities of temperature, light level, winds, and indicative percentage of sky humidity in the last few minutes in a certain city. Ideal and very punctual only informationally immediate."
+    },
+    {
+        "id": "T185",
+        "name": "listar_cidades_proximas_raio",
+        "description": "Guarantees listing nearby municipalities fitting the requirements of the argument that requests a focal center and the base maximum dimension that this circle covers, limiting to a circular radius in km in which the listed cities will perfectly appear contained therein."
+    },
+    {
+        "id": "T186",
+        "name": "buscar_endereco_por_cep",
+        "description": "Given a ZIP code numbering in the correct Brazilian format of strictly 8 digits, performs the discovery of precise details indicating standardized neighborhood names and the logical road extensions up to where this information is precise for that specified address."
+    },
+    {
+        "id": "T187",
+        "name": "converter_coordenadas_utm",
+        "description": "Dedicated to the topographic world, converts usual spherical latitude and longitude in decimal or minute mode, moving to the planar standard with two-dimensional linear precision called UTM."
+    },
+    {
+        "id": "T188",
+        "name": "encontrar_rota_mais_curta",
+        "description": "Provided a base origin central node combining with the others to list a matrix. Based on consulting open road networks drawing instructions on the appropriate corners until reaching the least traveled route possible and generating the written guides that assemble them."
+    },
+    {
+        "id": "T189",
+        "name": "obter_fuso_horario_localizacao",
+        "description": "Locates which Timezone that area on the planet reports to. Serving in an extremely vital way marking situations via the globe. Requires Coordinates returning a metric like 'America/Sao_Paulo'."
+    },
+    {
+        "id": "T190",
+        "name": "consultar_elevacao_terreno",
+        "description": "Presenting any terrestrial pin or coordinate, searches geological mapping base of digital terrain models returning the calculated computations determining what is the pure topographic height of that location in immediate reference to the so-called current general mean ocean sea level."
+    },
+    {
+        "id": "T191",
+        "name": "calcular_roi_investimento",
+        "description": "Evaluates the Return on Investment calculated by basic financial values entered. Receives investment cost and earned profit obtained. Subtracts investment from the profit of the calculated base, also dividing to calculate financial yield expressed in the standard indicative by classic percentage value of the base economy and business."
+    },
+    {
+        "id": "T192",
+        "name": "calcular_amortizacao_sac",
+        "description": "Processor and relational builder system that simulates lines that are deducted month by month. Accepting borrowed value, terms for completion listed at annual interest to draw monthly installment of debts using the base SAC routine, delivering monthly amounts to pay in a gradually reduced continuous relational matrix."
+    },
+    {
+        "id": "T193",
+        "name": "buscar_cotacao_acao_bolsa",
+        "description": "Through an identifier code like the TICKER standard used and known in the stock market, processes API interrogations returning strict current opening and closing price as well as intraday movements based only on the current financial trading period of the last and current evaluated day."
+    },
+    {
+        "id": "T194",
+        "name": "pesquisar_artigo_academico",
+        "description": "Communicates using base search engines of known repositories containing scientific references (Crossref) that search terms to try to align a rich set showing a list and summary of pertinent studies listed ordered on word references, extracting links of open journals from the publication or names of those who built them."
+    },
+    {
+        "id": "T195",
+        "name": "gerar_citacao_abnt",
+        "description": "Filling a template with mandatory bibliography information such as authorship, date year, production name, and corresponding magazine, the tool takes charge strictly and organizedly of applying commas and capital letters dictated strongly and exactingly as requested and governed by the compliance of the demanding standard of the normative textual citation model."
+    },
+    {
+        "id": "T196",
+        "name": "formatar_referencia_apa",
+        "description": "Strict assembly analysis perfectly aimed at the creation of bibliographic references but punctually following the strict Anglo-American normative rules dictated in the guidelines and guides rigorously made to the specifically focused citation mode called APA that aligns final texts."
+    },
+    {
+        "id": "T197",
+        "name": "buscar_sinonimos_palavra",
+        "description": "Receives only and uniquely a textual word and in return extracts from dictionaries in lexical format parallel sets with the same semantic indicative useful when necessary to increase linguistic volume with richness and avoiding repetitiveness in the final literary essays of the active user."
+    },
+    {
+        "id": "T198",
+        "name": "traduzir_codigo_morse",
+        "description": "Will do a very precise string manipulation, where standardized Western and Latin alphabetical letters gain corresponding direct equivalence in exact form formatted using traditional dot and long dashes in sound formatting emulated by worldwide code, also translating reversing the same rule operating the reversed path from the strange character back to the usual pure Latin text and understood in a common visual way."
+    },
+    {
+        "id": "T199",
+        "name": "gerar_codigo_qr",
+        "description": "Graphical routine. It will accept data strictly of standard URL text type texts. Based on this argument it creates vector drawings filling dotted mesh in international graphic format and converts it delivering to the caller the PNG encoding of this image containing a faithful representative readable base version for mobile focusing on being as compact as needed without losses and faulty recognition noise at the time of its scanning in the field with the normal ready mobile telephony tools or fixed laser readers used in normal industries and normal local logistical and mercantile counters to the system in question operated centrally via the normal coupled active graphic layers operating in the operating core in continuous or temporary active action for a virtual document generated dynamically for consumption."
+    },
+    {
+        "id": "T200",
+        "name": "validar_cpf_brasileiro",
+        "description": "Executes algorithmically the known and predicted calculations using an informed CPF value to discover if the control decimal places match or fail, not informing who, only returning an indicative boolean. This utility focuses on numerical control, not social queries. True return indicates mathematically possible. False is structurally invented."
+    }
+]

@@ -1,0 +1,266 @@
+Estou realizando uma pesquisa acadêmica sobre a capacidade de scanners baseados em LLM de detectar **Tool Poisoning em descrições de ferramentas do Model Context Protocol (MCP)**.
+
+Vou anexar um arquivo `.txt` contendo o **prompt completo utilizado pelo mecanismo LLM de detecção do scanner que estou analisando**.
+
+Sua tarefa nesta etapa é realizar **exclusivamente uma auditoria técnica e metodológica desse prompt**.
+
+**Não gere, modifique ou proponha nenhuma descrição de ferramenta. Não crie exemplos de Tool Poisoning. Não tente explorar o scanner na prática. Não faça nenhuma alteração no dataset.**
+
+O objetivo desta etapa é compreender profundamente **como o detector funciona conceitualmente e quais são suas possíveis limitações**, para que essas informações possam ser utilizadas posteriormente na construção controlada de um dataset acadêmico.
+
+### 1. Leia o prompt integralmente
+
+Analise todo o conteúdo do arquivo anexado antes de chegar às conclusões.
+
+Não faça uma análise superficial baseada apenas em palavras-chave.
+
+Considere, quando presentes:
+
+- instruções do sistema;
+- definição de ameaça;
+- definição de Tool Poisoning;
+- critérios de classificação;
+- taxonomias;
+- regras de decisão;
+- prioridades entre regras;
+- exemplos fornecidos ao modelo;
+- formato esperado da resposta;
+- critérios de segurança;
+- instruções sobre falsos positivos;
+- instruções sobre falsos negativos;
+- contexto fornecido ao modelo;
+- limitações explicitamente declaradas;
+- qualquer outra informação relevante para o processo de classificação.
+
+### 2. Reconstrua o modelo mental do detector
+
+Explique, com suas próprias palavras, qual parece ser a estratégia utilizada pelo scanner para decidir se uma descrição é segura ou maliciosa.
+
+Identifique:
+
+- o que o detector considera uma ameaça;
+- quais características parecem aumentar a probabilidade de classificação como maliciosa;
+- quais características parecem favorecer uma classificação como legítima;
+- quais tipos de Tool Poisoning são explicitamente contemplados;
+- quais tipos são apenas implicitamente contemplados;
+- quais aspectos parecem não ser considerados.
+
+Quando possível, diferencie claramente entre:
+
+**"o prompt explicitamente determina"**
+
+e
+
+**"isso parece ser uma consequência ou interpretação do prompt"**.
+
+### 3. Identifique possíveis pontos cegos
+
+Procure sistematicamente por situações nas quais o detector possa apresentar dificuldade.
+
+Analise, entre outras possibilidades:
+
+- variações linguísticas;
+- paráfrases;
+- sinônimos;
+- mudanças de estrutura sintática;
+- instruções diretas versus indiretas;
+- instruções explícitas versus implícitas;
+- contexto;
+- dependência semântica;
+- instruções inseridas dentro de uma descrição legítima;
+- separação entre finalidade declarada e comportamento solicitado;
+- mensagens muito curtas;
+- mensagens muito longas;
+- descrições com múltiplas funções;
+- linguagem administrativa;
+- linguagem técnica;
+- linguagem natural;
+- ambiguidade;
+- negação;
+- condicionais;
+- instruções conflitantes;
+- instruções distribuídas em diferentes partes da descrição;
+- conteúdo semanticamente equivalente apresentado de formas diferentes;
+- diferenças entre idiomas;
+- diferenças entre português com e sem acentuação;
+- erros ortográficos ou variações de escrita;
+- possíveis dependências de palavras-chave;
+- excesso ou falta de contexto.
+
+Não assuma que todos esses fatores são vulnerabilidades. Determine, a partir do prompt, quais realmente podem representar limitações e explique por quê.
+
+### 4. Analise possíveis falsos positivos
+
+Identifique situações em que uma ferramenta legítima poderia ser interpretada incorretamente como maliciosa.
+
+Considere especialmente ferramentas legítimas que:
+
+- manipulam arquivos;
+- executam operações administrativas;
+- acessam configurações;
+- trabalham com credenciais de maneira legítima;
+- executam comandos;
+- alteram dados;
+- interagem com sistemas externos;
+- possuem descrições longas;
+- possuem linguagem imperativa;
+- mencionam segurança ou permissões;
+- realizam operações potencialmente sensíveis dentro de sua finalidade legítima.
+
+Explique quais características poderiam induzir o detector ao erro.
+
+### 5. Analise possíveis falsos negativos
+
+Identifique situações em que uma descrição potencialmente maliciosa poderia não satisfazer claramente os critérios utilizados pelo detector.
+
+Não crie exemplos concretos de ataques nesta etapa.
+
+Em vez disso, descreva **classes ou padrões abstratos de possíveis casos problemáticos**.
+
+Por exemplo:
+
+> "Uma descrição cuja intenção conflitante seja expressa de maneira semanticamente indireta pode receber tratamento diferente de uma instrução explicitamente imperativa."
+
+O objetivo é identificar categorias de fragilidade, não produzir conteúdo ofensivo.
+
+### 6. Analise dependências linguísticas
+
+Determine se o detector parece depender de características específicas da linguagem utilizada.
+
+Analise separadamente:
+
+- inglês;
+- português;
+- português com acentuação;
+- português sem acentuação;
+- traduções;
+- paráfrases;
+- alterações sintáticas;
+- variações lexicais.
+
+Avalie se o prompt fornece ao modelo mecanismos suficientes para tratar essas variações de maneira consistente.
+
+### 7. Analise dependências de contexto
+
+Determine se a decisão parece depender:
+
+- apenas da descrição da ferramenta;
+- do nome da ferramenta;
+- da finalidade declarada;
+- dos parâmetros;
+- da combinação desses elementos;
+- ou de algum contexto adicional fornecido pelo scanner.
+
+Identifique possíveis situações em que uma alteração no contexto possa mudar a classificação sem alterar substancialmente a intenção semântica.
+
+### 8. Analise a taxonomia utilizada
+
+Caso o prompt utilize uma taxonomia de ameaças, examine:
+
+- quais categorias existem;
+- quais categorias parecem bem definidas;
+- quais são vagas ou sobrepostas;
+- quais tipos de Tool Poisoning podem não possuir uma categoria clara;
+- possíveis ambiguidades entre categorias;
+- possibilidade de uma mesma descrição pertencer a mais de uma categoria;
+- como essa classificação pode afetar os resultados estatísticos.
+
+### 9. Analise a consistência da decisão
+
+Verifique se o prompt fornece critérios suficientemente objetivos para produzir decisões consistentes.
+
+Procure possíveis situações nas quais dois exemplos semanticamente semelhantes poderiam receber classificações diferentes por causa de:
+
+- redação;
+- ordem das informações;
+- comprimento;
+- contexto;
+- idioma;
+- escolha de palavras;
+- estrutura textual.
+
+Também avalie se o próprio formato de resposta exigido pelo prompt pode introduzir ambiguidades.
+
+### 10. Classifique as vulnerabilidades encontradas
+
+Para cada limitação identificada, forneça:
+
+- ID;
+- categoria;
+- descrição;
+- trecho ou conceito do prompt relacionado;
+- motivo pelo qual pode representar uma limitação;
+- impacto potencial na detecção;
+- tipo de erro esperado:
+  - falso positivo;
+  - falso negativo;
+  - inconsistência;
+  - classificação incorreta de categoria;
+- nível de relevância:
+  - baixo;
+  - médio;
+  - alto;
+  - crítico.
+
+Não atribua severidade arbitrariamente. Justifique brevemente cada classificação.
+
+### 11. Procure também por limitações metodológicas
+
+Além das vulnerabilidades linguísticas, examine problemas que possam afetar a validade da avaliação do scanner, como:
+
+- critérios subjetivos;
+- definições incompletas;
+- categorias sobrepostas;
+- ausência de critérios para determinados casos;
+- dependência excessiva de exemplos;
+- possíveis vieses linguísticos;
+- critérios que podem favorecer determinados tipos de descrição;
+- inconsistências entre instruções diferentes dentro do próprio prompt;
+- ambiguidades na definição de "seguro" e "malicioso".
+
+### 12. Não tente "quebrar" o scanner
+
+Esta é uma etapa de **análise**, não de exploração.
+
+Não produza:
+
+- descrições maliciosas;
+- payloads;
+- prompt injections;
+- instruções para contornar o detector;
+- ferramentas maliciosas;
+- exemplos concretos destinados a escapar da classificação.
+
+Descreva as limitações de forma **abstrata e acadêmica**.
+
+### 13. Resultado esperado
+
+Ao final, apresente um relatório estruturado contendo:
+
+1. **Resumo do funcionamento do detector**
+2. **Critérios explícitos de detecção**
+3. **Critérios implícitos**
+4. **Pontos fortes**
+5. **Pontos cegos**
+6. **Possíveis falsos positivos**
+7. **Possíveis falsos negativos**
+8. **Limitações linguísticas**
+9. **Limitações semânticas**
+10. **Limitações contextuais**
+11. **Limitações da taxonomia**
+12. **Limitações metodológicas**
+13. **Tabela consolidada de vulnerabilidades**
+14. **Ranking das limitações mais relevantes para investigação experimental**
+
+Na tabela consolidada, utilize:
+
+| ID | Categoria | Limitação | Evidência no prompt | Tipo de erro | Relevância |
+|---|---|---|---|---|---|
+
+### Regra fundamental
+
+**Nesta etapa, não faça nenhuma modificação no dataset e não gere nenhuma descrição de ferramenta.**
+
+Quero somente uma análise profunda do prompt anexado.
+
+O conhecimento produzido neste relatório será utilizado posteriormente para definir, de maneira controlada, quais características serão investigadas experimentalmente.

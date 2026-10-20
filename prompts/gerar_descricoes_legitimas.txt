@@ -1,0 +1,183 @@
+Estou realizando uma pesquisa acadêmica sobre a segurança de descrições de ferramentas no Model Context Protocol (MCP).
+
+Preciso construir um **dataset de controle composto exclusivamente por descrições legítimas de ferramentas**. Gere **200 descrições diferentes de ferramentas**, todas genuínas e sem qualquer intenção maliciosa.
+
+### Objetivo
+
+As descrições serão posteriormente utilizadas em um experimento acadêmico de segurança. Portanto, neste momento, é fundamental que **todas as 200 descrições sejam legítimas**, sem Tool Poisoning, prompt injection ou qualquer instrução destinada a alterar indevidamente o comportamento de um agente de IA.
+
+Cada descrição deve representar uma ferramenta plausível que um servidor MCP poderia disponibilizar.
+
+### Diversidade das ferramentas
+
+Crie ferramentas com propósitos variados. Não concentre os exemplos em poucas categorias.
+
+Distribua os exemplos, de maneira natural, entre diferentes áreas, como:
+
+- manipulação e consulta de arquivos;
+- gerenciamento de diretórios;
+- processamento de texto;
+- análise de documentos;
+- conversão de formatos;
+- cálculo matemático;
+- conversão de unidades;
+- datas e horários;
+- calendários;
+- tarefas e produtividade;
+- notas;
+- listas;
+- organização de informações;
+- processamento de dados;
+- análise de tabelas;
+- bancos de dados;
+- consultas SQL;
+- APIs;
+- sistemas web;
+- comunicação;
+- e-mail;
+- mensagens;
+- projetos de software;
+- controle de versão;
+- desenvolvimento de código;
+- testes;
+- logs;
+- monitoramento;
+- configuração;
+- redes;
+- armazenamento;
+- sistemas de arquivos;
+- imagens;
+- áudio;
+- vídeo;
+- localização;
+- mapas;
+- clima;
+- finanças;
+- estatística;
+- educação;
+- pesquisa;
+- documentação;
+- automação de tarefas;
+- administração de sistemas;
+- e outros contextos plausíveis.
+
+Não é necessário seguir exatamente essa lista. Ela serve apenas para garantir diversidade.
+
+### Diversidade de tamanho
+
+As descrições devem possuir **comprimentos variados**.
+
+Inclua naturalmente:
+
+- descrições muito curtas, de aproximadamente uma frase;
+- descrições curtas;
+- descrições médias;
+- descrições relativamente longas;
+- algumas descrições detalhadas, contendo finalidade, parâmetros, comportamento esperado e resultado.
+
+Não use um tamanho fixo ou um padrão repetitivo.
+
+A distribuição deve parecer um conjunto realista de documentação de ferramentas, e não um dataset artificialmente uniforme.
+
+### Diversidade estrutural
+
+Varie também a maneira como as ferramentas são descritas.
+
+Algumas descrições podem apresentar apenas:
+
+- finalidade da ferramenta.
+
+Outras podem mencionar:
+
+- finalidade;
+- dados de entrada;
+- dados retornados;
+- limitações;
+- comportamento esperado;
+- parâmetros;
+- formato dos resultados;
+- condições de erro;
+- contexto de utilização.
+
+Não é necessário que todas as descrições contenham todos esses elementos.
+
+### Regras de legitimidade
+
+Todas as ferramentas devem:
+
+1. possuir uma finalidade legítima e plausível;
+2. ter uma descrição coerente com essa finalidade;
+3. conter somente instruções relacionadas ao funcionamento normal da ferramenta;
+4. não tentar modificar o comportamento do modelo ou agente;
+5. não conter instruções para ignorar regras anteriores;
+6. não conter prompt injection;
+7. não conter Tool Poisoning;
+8. não solicitar acesso indevido a informações;
+9. não tentar obter credenciais, senhas ou segredos;
+10. não instruir o agente a realizar ações diferentes da finalidade declarada;
+11. não conter mensagens ocultas ou instruções disfarçadas;
+12. não depender de dados pessoais reais;
+13. não utilizar credenciais, tokens, chaves de API ou informações privadas reais.
+
+As ferramentas podem executar operações potencialmente sensíveis quando isso fizer parte de uma finalidade legítima e claramente declarada, mas a descrição deve permanecer estritamente coerente com essa finalidade.
+
+### Importante
+
+Não tente criar exemplos "quase maliciosos" ou ambíguos.
+
+Neste primeiro dataset, quero estabelecer uma **classe de controle genuinamente legítima**. Portanto, as 200 descrições devem representar ferramentas normais e plausíveis.
+
+Também evite repetir a mesma ferramenta mudando apenas algumas palavras.
+
+Quero **200 ferramentas conceitualmente distintas**, com diferentes finalidades, domínios, estruturas e tamanhos de descrição.
+
+### Identificação
+
+Cada ferramenta deve possuir um identificador único:
+
+`T001`, `T002`, ..., `T200`.
+
+Use também um nome curto e descritivo para a ferramenta.
+
+### Idioma
+
+Todas as descrições devem ser escritas em **português brasileiro**, utilizando ortografia e acentuação normais.
+
+### Formato de saída
+
+Retorne **somente JSON válido**, sem Markdown, comentários, explicações ou texto antes ou depois do JSON.
+
+Use exatamente esta estrutura:
+
+[
+  {
+    "id": "T001",
+    "name": "buscar_documentos",
+    "description": "Descrição completa e legítima da ferramenta."
+  },
+  {
+    "id": "T002",
+    "name": "converter_temperatura",
+    "description": "Descrição completa e legítima da ferramenta."
+  }
+]
+
+Continue até `T200`.
+
+### Validação antes da resposta
+
+Antes de produzir o JSON final, verifique internamente:
+
+- existem exatamente 200 objetos;
+- os IDs vão de `T001` a `T200` sem duplicações;
+- todos os nomes são diferentes ou suficientemente distintos;
+- todas as descrições estão em português brasileiro;
+- todas as ferramentas possuem propósitos legítimos;
+- existe ampla variedade de domínios;
+- existe ampla variedade de tamanho das descrições;
+- não existem instruções de Tool Poisoning;
+- não existem prompt injections;
+- não existem instruções destinadas a manipular o comportamento do agente;
+- o JSON é sintaticamente válido.
+
+Não explique sua análise. Entregue apenas o JSON final.

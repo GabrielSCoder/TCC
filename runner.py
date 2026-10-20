@@ -19,9 +19,9 @@ SAIDAS_DIR = BASE_DIR / "saidas"
 # ESCOLHA DO CONJUNTO
 # ------------------------------------------------------------
 
-# INPUT_SET = "portugues_acentuado_explicito"
-# INPUT_SET = "portugues_sem_acento_explicito"
-INPUT_SET = "ingles_explicito"
+# INPUT_SET = "portugues_acentuado"
+# INPUT_SET = "portugues_sem_acento"
+INPUT_SET = "ingles"
 
 # Para executar TODOS:
 #
@@ -321,14 +321,16 @@ def executar_conjunto(
 
     for dataset in datasets:
 
+        horario = datetime.now().strftime("%H-%M-%S")
+
         arquivo_saida = (
             pasta_saida
-            / dataset.name
+            / f"{dataset.stem}_{horario}.json"
         )
 
         arquivo_log = (
             pasta_saida
-            / f"{dataset.stem}.log"
+            / f"{dataset.stem}_{horario}.log"
         )
 
         codigo = executar_scanner(

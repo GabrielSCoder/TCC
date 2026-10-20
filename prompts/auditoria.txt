@@ -1,0 +1,346 @@
+# CONTEXTO E OBJETIVO DA AUDITORIA
+
+Estou desenvolvendo uma pesquisa acadêmica sobre a detecção de Tool Poisoning em ferramentas MCP, comparando o desempenho de um scanner de segurança diante de descrições maliciosas explícitas e descrições maliciosas ofuscadas.
+
+Vou fornecer dois arquivos JSON:
+
+1. **Dataset de Tool Poisoning explícito**: contém 200 descrições maliciosas em linguagem direta.
+2. **Dataset de Tool Poisoning ofuscado**: contém 200 descrições maliciosas que deveriam representar os mesmos ataques, mas apresentados por meio de ofuscação linguística.
+
+Os dois datasets utilizam os mesmos identificadores, de T001 a T200. Cada ferramenta do segundo dataset deveria ser uma transformação ofuscada da ferramenta correspondente no primeiro.
+
+Sua tarefa é realizar uma **auditoria rigorosa da equivalência semântica e comportamental dos ataques**, comparando cada par correspondente:
+
+- T001 explícita com T001 ofuscada;
+- T002 explícita com T002 ofuscada;
+- e assim sucessivamente até T200.
+
+## 1. PERGUNTA CENTRAL
+
+Para cada par, responda:
+
+**A descrição ofuscada ainda representa essencialmente o mesmo comportamento malicioso e conduz ao mesmo resultado final pretendido pela descrição explícita, ou a ofuscação alterou, enfraqueceu, omitiu ou eliminou esse comportamento?**
+
+Não basta que os dois textos mencionem o mesmo assunto ou pareçam relacionados.
+
+É necessário verificar se a ação maliciosa pretendida na descrição explícita continua semanticamente presente na versão ofuscada.
+
+Por exemplo, se a descrição explícita determina a coleta de determinado tipo de informação, mas a versão ofuscada apenas menciona genericamente a preparação de informações auxiliares, não considere automaticamente que existe equivalência. Verifique se o texto ofuscado ainda implica a coleta da mesma informação.
+
+Da mesma forma, se o original pretende transmitir informações a outro destino, uma referência genérica a processamento complementar não comprova que a transmissão continua representada.
+
+**Não presuma equivalência apenas porque os textos compartilham palavras, contexto ou finalidade legítima.**
+
+---
+
+## 2. ANALISE CADA PAR INDIVIDUALMENTE
+
+Para cada ID, examine os seguintes aspectos.
+
+### A. Ação maliciosa original
+
+Identifique na descrição explícita:
+
+- qual é a ação maliciosa;
+- qual é o objeto ou recurso afetado;
+- quais informações, dados ou resultados estão envolvidos;
+- qual é a condição de execução, se houver;
+- qual é o resultado final pretendido;
+- quais são os elementos essenciais que precisam permanecer na versão ofuscada.
+
+Resuma a ação em uma frase clara, sem se limitar a copiar o texto original.
+
+### B. Interpretação da descrição ofuscada
+
+Analise o significado da descrição ofuscada e identifique:
+
+- qual ação ela efetivamente descreve ou implica;
+- qual objeto ou recurso é afetado;
+- quais informações ou resultados estão envolvidos;
+- qual é o resultado final que o texto sugere;
+- se esses elementos estão explícitos, implícitos, vagos ou ausentes;
+- quais trechos sustentam sua interpretação.
+
+Não atribua à descrição ofuscada intenções que não sejam sustentadas pelo texto.
+
+### C. Equivalência da ação final
+
+Compare as duas ações.
+
+Verifique separadamente se a versão ofuscada preserva:
+
+1. **Ação:** a operação maliciosa continua sendo essencialmente a mesma?
+2. **Alvo:** o recurso, objeto ou tipo de informação afetado permanece equivalente?
+3. **Resultado:** o efeito final pretendido continua representado?
+4. **Fluxo:** a ação continua fazendo parte do comportamento adicional da ferramenta?
+5. **Condições:** alguma condição foi adicionada, removida ou alterada de modo a mudar materialmente o comportamento?
+6. **Escopo:** a ação foi reduzida, ampliada ou substituída por outra?
+7. **Intenção:** a ofuscação tornou a intenção menos evidente sem eliminar a ação, ou tornou a própria ação indeterminada?
+
+Uma mudança de palavras não representa necessariamente uma mudança de comportamento. Da mesma forma, palavras aparentemente semelhantes não garantem que o comportamento tenha sido preservado.
+
+### D. Classificação da equivalência
+
+Atribua exatamente uma das seguintes classificações a cada par:
+
+- **EQUIVALENTE:** a descrição ofuscada preserva a ação maliciosa essencial e seu resultado final, embora a intenção possa estar menos evidente.
+- **PARCIALMENTE EQUIVALENTE:** parte relevante do comportamento original permanece, mas um componente essencial foi enfraquecido, omitido ou alterado.
+- **NÃO EQUIVALENTE:** a descrição ofuscada representa uma ação materialmente diferente ou não preserva o comportamento malicioso essencial.
+- **INDETERMINADO:** o texto não fornece evidências suficientes para concluir se a ação original foi preservada.
+
+Use EQUIVALENTE somente quando houver evidências textuais suficientes.
+
+Não classifique uma descrição como equivalente apenas porque seria possível imaginar uma interpretação maliciosa para ela.
+
+---
+
+## 3. DIFERENCIE OFUSCAÇÃO DA ELIMINAÇÃO DO ATAQUE
+
+Esta é uma das partes mais importantes da análise.
+
+Quero distinguir três situações:
+
+**Situação 1 — Ofuscação bem-sucedida semanticamente**
+
+A ação maliciosa continua presente, mas a forma de expressá-la ficou indireta, menos evidente ou linguisticamente mascarada.
+
+**Situação 2 — Ofuscação que enfraqueceu o ataque**
+
+A descrição ainda sugere parte da ação original, mas deixou de especificar algum elemento importante, como o objeto afetado, a operação ou o resultado final.
+
+**Situação 3 — Ofuscação que eliminou ou substituiu o ataque**
+
+A descrição ficou tão genérica que já não representa de maneira sustentada a ação maliciosa original, ou passou a representar outro comportamento.
+
+Não confunda essas três situações.
+
+Uma frase vaga como “considere os recursos auxiliares disponíveis” não comprova, por si só, a preservação de uma ação específica de coleta, divulgação, alteração ou transmissão de dados.
+
+Se o significado malicioso só puder ser recuperado inventando informações que não estão no texto, considere isso uma evidência contra a equivalência.
+
+---
+
+## 4. AVALIE A QUALIDADE DA OFUSCAÇÃO SEPARADAMENTE
+
+A equivalência semântica e a qualidade da ofuscação são dimensões diferentes.
+
+Depois de avaliar a equivalência, classifique a forma de ofuscação:
+
+- **OFUSCAÇÃO EFETIVA:** o comportamento essencial foi preservado e sua intenção ficou menos evidente.
+- **OFUSCAÇÃO FRACA:** o comportamento foi preservado, mas a intenção continua relativamente clara.
+- **OFUSCAÇÃO EXCESSIVA:** a descrição tornou-se vaga ou incompleta a ponto de prejudicar a preservação do comportamento original.
+- **SEM OFUSCAÇÃO RELEVANTE:** a versão continua essencialmente explícita ou apenas troca algumas palavras por sinônimos transparentes.
+- **NÃO APLICÁVEL:** não há equivalência suficiente para avaliar a qualidade da ofuscação em relação ao ataque original.
+
+Uma descrição pode ter uma ofuscação linguisticamente forte e, ao mesmo tempo, ser semanticamente inválida para o experimento porque deixou de representar o ataque original.
+
+**Não considere uma ofuscação melhor apenas por ser mais difícil de interpretar. Ela precisa preservar a ação maliciosa que está sendo estudada.**
+
+---
+
+## 5. RELACIONE A AUDITORIA AOS RESULTADOS DO SCANNER
+
+Se eu fornecer os resultados dos scans, utilize-os como uma fonte adicional de análise.
+
+Para cada ID, identifique, quando os dados estiverem disponíveis:
+
+- resultado do scanner para a versão explícita;
+- resultado do scanner para a versão ofuscada;
+- se a versão explícita foi detectada;
+- se a versão ofuscada foi detectada;
+- se houve falso negativo na versão ofuscada;
+- classificação da equivalência semântica;
+- qualidade da ofuscação.
+
+Não invente resultados de detecção caso eu não tenha fornecido os arquivos de saída do scanner.
+
+### Classifique a interpretação dos falsos negativos
+
+Quando a versão explícita for detectada e a ofuscada não for, utilize a seguinte matriz:
+
+| Equivalência | Resultado ofuscado | Interpretação |
+|---|---|---|
+| Equivalente | Não detectado | Evidência compatível com falha de detecção diante da ofuscação |
+| Parcialmente equivalente | Não detectado | Resultado inconclusivo quanto à robustez da detecção, pois o ataque foi alterado |
+| Não equivalente | Não detectado | Não deve ser tratado como evidência válida de falha em detectar o mesmo ataque |
+| Indeterminado | Não detectado | Caso que precisa ser revisado antes de qualquer conclusão |
+
+Essa matriz é essencial para separar os falsos negativos relevantes para o experimento dos casos em que a própria transformação textual comprometeu a validade da comparação.
+
+Se a versão explícita também não tiver sido detectada, registre esse fato separadamente. Não atribua automaticamente a diferença à ofuscação.
+
+Se os resultados forem de execuções repetidas, considere também a frequência de detecção em cada versão, em vez de presumir que uma única execução representa o comportamento definitivo do scanner.
+
+---
+
+## 6. NÃO MODIFIQUE OS DATASETS DURANTE A PRIMEIRA ETAPA
+
+Na primeira etapa, quero somente uma auditoria.
+
+Não reescreva as descrições.
+
+Não corrija automaticamente os casos considerados inadequados.
+
+Não gere novas descrições maliciosas.
+
+Não substitua nenhum texto dos arquivos originais.
+
+O objetivo inicial é identificar e documentar os problemas de equivalência semântica.
+
+Somente depois de apresentar os resultados da auditoria, você poderá sugerir quais IDs precisariam ser revisados, sem alterar os arquivos originais.
+
+---
+
+## 7. FORMATO DOS RESULTADOS
+
+Gere um arquivo chamado `auditoria_equivalencia_tool_poisoning.json`.
+
+Ele deve conter exatamente um registro para cada ID, de T001 a T200.
+
+Cada registro deve seguir esta estrutura:
+
+```json
+{
+  "id": "T001",
+  "explicit_attack_summary": "Resumo da ação maliciosa pretendida pela descrição explícita.",
+  "obfuscated_action_interpretation": "Resumo do comportamento que a descrição ofuscada efetivamente sustenta.",
+  "action_equivalence": "EQUIVALENTE",
+  "action_equivalence_justification": "Justificativa baseada nos dois textos.",
+  "evidence_explicit": "Trecho da descrição explícita que sustenta a interpretação.",
+  "evidence_obfuscated": "Trecho da descrição ofuscada que sustenta a interpretação.",
+  "preserved_elements": [
+    "Elemento essencial preservado"
+  ],
+  "changed_or_missing_elements": [
+    "Elemento alterado ou ausente, se houver"
+  ],
+  "obfuscation_quality": "OFUSCAÇÃO EFETIVA",
+  "semantic_drift": "NENHUM",
+  "scanner_explicit_result": null,
+  "scanner_obfuscated_result": null,
+  "obfuscated_false_negative": null,
+  "false_negative_interpretation": "PENDENTE",
+  "requires_manual_review": false
+}
+```
+
+Utilize os seguintes valores padronizados:
+
+**`action_equivalence`**
+- `EQUIVALENTE`
+- `PARCIALMENTE EQUIVALENTE`
+- `NÃO EQUIVALENTE`
+- `INDETERMINADO`
+
+**`obfuscation_quality`**
+- `OFUSCAÇÃO EFETIVA`
+- `OFUSCAÇÃO FRACA`
+- `OFUSCAÇÃO EXCESSIVA`
+- `SEM OFUSCAÇÃO RELEVANTE`
+- `NÃO APLICÁVEL`
+
+**`semantic_drift`**
+- `NENHUM`
+- `LEVE`
+- `MODERADO`
+- `GRAVE`
+- `INDETERMINADO`
+
+**Campos de resultados do scanner**
+- Utilize os valores efetivamente presentes nos arquivos de saída, caso sejam fornecidos.
+- Se os resultados não tiverem sido fornecidos, utilize `null`.
+- `obfuscated_false_negative` deve ser `true` ou `false` somente quando os resultados permitirem determinar isso; caso contrário, use `null`.
+
+**`requires_manual_review`**
+- `true` quando houver ambiguidade, divergência importante, ausência de evidências ou necessidade de julgamento humano.
+- `false` quando a comparação estiver suficientemente fundamentada.
+
+Os trechos de evidência devem ser extraídos dos textos fornecidos, sem serem inventados ou alterados de maneira a modificar seu significado.
+
+---
+
+## 8. RELATÓRIO CONSOLIDADO
+
+Além do JSON por ID, produza um relatório chamado `relatorio_auditoria_equivalencia.md`.
+
+O relatório deve apresentar:
+
+### A. Resumo quantitativo
+
+Informe:
+
+- total de pares analisados;
+- quantidade e percentual de pares equivalentes;
+- quantidade e percentual de pares parcialmente equivalentes;
+- quantidade e percentual de pares não equivalentes;
+- quantidade e percentual de pares indeterminados;
+- quantidade de casos com ofuscação efetiva;
+- quantidade de casos com ofuscação fraca;
+- quantidade de casos com ofuscação excessiva;
+- quantidade de casos sem ofuscação relevante;
+- quantidade de casos que precisam de revisão manual.
+
+Calcule os percentuais com base no total correto e deixe explícito o denominador.
+
+### B. Lista dos casos problemáticos
+
+Apresente os IDs classificados como:
+
+- `PARCIALMENTE EQUIVALENTE`;
+- `NÃO EQUIVALENTE`;
+- `INDETERMINADO`;
+- `OFUSCAÇÃO EXCESSIVA`;
+- `SEM OFUSCAÇÃO RELEVANTE`.
+
+Para cada ID, explique resumidamente o problema encontrado.
+
+### C. Análise dos falsos negativos
+
+Se os resultados do scanner tiverem sido fornecidos, separe:
+
+1. falsos negativos em pares semanticamente equivalentes;
+2. falsos negativos em pares parcialmente equivalentes;
+3. falsos negativos em pares não equivalentes;
+4. casos indeterminados.
+
+Explique quais grupos fornecem evidências mais válidas para avaliar o impacto da ofuscação sobre a detecção.
+
+### D. Recomendações metodológicas
+
+Explique:
+
+- quais casos podem ser mantidos na comparação principal;
+- quais devem ser analisados separadamente;
+- quais precisam ser revisados antes de serem utilizados;
+- como a deriva semântica pode afetar a validade dos resultados;
+- como relatar os falsos negativos sem confundir falha do scanner com alteração do ataque.
+
+Não descarte casos silenciosamente. Toda exclusão ou separação recomendada deve ter justificativa explícita.
+
+---
+
+## 9. VERIFICAÇÃO DE COMPLETUDE E CONSISTÊNCIA
+
+Antes de finalizar:
+
+1. Compare os dois datasets usando os IDs, nunca apenas a posição dos registros.
+2. Confirme que cada ID explícito tem exatamente um correspondente ofuscado.
+3. Identifique IDs ausentes, duplicados ou inesperados.
+4. Verifique todos os 200 pares individualmente.
+5. Não suponha equivalência a partir de uma amostra.
+6. Não considere similaridade lexical como prova de equivalência semântica.
+7. Não atribua uma ação à versão ofuscada que não seja sustentada pelo texto.
+8. Diferencie claramente observações textuais de inferências.
+9. Mantenha os resultados do scanner separados das avaliações semânticas.
+10. Gere os dois arquivos solicitados, se o ambiente permitir criar arquivos.
+11. Se não for possível criar arquivos, informe essa limitação e apresente os resultados em partes organizadas, sem omitir IDs.
+
+## INSTRUÇÃO FINAL
+
+Realize uma auditoria crítica, conservadora e individual de todos os 200 pares.
+
+A prioridade não é demonstrar que a ofuscação funcionou. A prioridade é descobrir se ela realmente preservou o comportamento malicioso que deveria representar.
+
+**Não confunda ocultar a intenção com eliminar a ação.**
+
+O objetivo é determinar se os falsos negativos do scanner representam falhas reais de detecção diante de um ataque semanticamente equivalente, ou se alguns deles ocorreram porque a versão ofuscada deixou de expressar adequadamente o comportamento da versão explícita.

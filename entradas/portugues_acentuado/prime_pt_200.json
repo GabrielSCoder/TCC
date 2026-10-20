@@ -1,0 +1,1002 @@
+[
+    {
+        "id": "T001",
+        "name": "listar_arquivos",
+        "description": "Lista os arquivos e subdiretórios contidos em um diretório especificado pelo usuário."
+    },
+    {
+        "id": "T002",
+        "name": "ler_conteudo_arquivo",
+        "description": "Lê e retorna o conteúdo em formato de texto de um arquivo específico. Aceita o caminho do arquivo como parâmetro obrigatório e um parâmetro opcional para definir o encoding (padrão UTF-8)."
+    },
+    {
+        "id": "T003",
+        "name": "escrever_arquivo",
+        "description": "Cria um novo arquivo ou sobrescreve um existente com o conteúdo fornecido. Parâmetros: 'caminho' (string) e 'conteudo' (string). Retorna sucesso ou erro caso o diretório não tenha permissão de escrita."
+    },
+    {
+        "id": "T004",
+        "name": "criar_diretorio",
+        "description": "Cria uma nova pasta no caminho especificado."
+    },
+    {
+        "id": "T005",
+        "name": "excluir_arquivo",
+        "description": "Remove um arquivo do sistema. Requer o caminho completo do arquivo. Não move para a lixeira, a exclusão é permanente."
+    },
+    {
+        "id": "T006",
+        "name": "mover_arquivo",
+        "description": "Move um arquivo de um diretório para outro. Também pode ser utilizado para renomear arquivos alterando o nome no caminho de destino."
+    },
+    {
+        "id": "T007",
+        "name": "copiar_arquivo",
+        "description": "Gera uma cópia exata de um arquivo no destino desejado, preservando os metadados originais sempre que possível."
+    },
+    {
+        "id": "T008",
+        "name": "obter_metadados_arquivo",
+        "description": "Retorna informações detalhadas sobre um arquivo, incluindo tamanho em bytes, data de criação, data de última modificação e permissões de acesso."
+    },
+    {
+        "id": "T009",
+        "name": "buscar_arquivo_por_nome",
+        "description": "Realiza uma busca recursiva em um diretório base para encontrar arquivos que correspondam a um padrão de nome ou extensão específica."
+    },
+    {
+        "id": "T010",
+        "name": "calcular_hash_arquivo",
+        "description": "Calcula o hash de um arquivo para verificar sua integridade. Suporta os algoritmos MD5, SHA-1 e SHA-256. Retorna a string do hash em formato hexadecimal."
+    },
+    {
+        "id": "T011",
+        "name": "contar_palavras",
+        "description": "Analisa uma string de texto e retorna o número total de palavras, ignorando pontuações e espaços extras."
+    },
+    {
+        "id": "T012",
+        "name": "extrair_texto_pdf",
+        "description": "Extrai todo o texto legível de um documento PDF. Recebe o caminho do arquivo e retorna uma string contendo o texto, mantendo a quebra de linhas básica. Não processa imagens rasterizadas."
+    },
+    {
+        "id": "T013",
+        "name": "substituir_texto",
+        "description": "Realiza a substituição de ocorrências de uma substring por outra dentro de um texto fornecido. Permite uso de expressões regulares."
+    },
+    {
+        "id": "T014",
+        "name": "converter_markdown_html",
+        "description": "Recebe uma string contendo marcação em Markdown e a converte para código HTML válido."
+    },
+    {
+        "id": "T015",
+        "name": "formatar_json",
+        "description": "Recebe uma string JSON não formatada e retorna o mesmo JSON formatado com indentação de 2 ou 4 espaços para facilitar a leitura humana."
+    },
+    {
+        "id": "T016",
+        "name": "extrair_emails",
+        "description": "Busca e extrai todos os endereços de e-mail válidos presentes em um bloco de texto, retornando-os como um array de strings sem duplicatas."
+    },
+    {
+        "id": "T017",
+        "name": "analisar_sentimento_texto",
+        "description": "Avalia um texto fornecido e retorna uma pontuação de sentimento que varia de -1.0 (muito negativo) a 1.0 (muito positivo), além de uma categoria qualitativa."
+    },
+    {
+        "id": "T018",
+        "name": "traduzir_texto",
+        "description": "Traduz um segmento de texto de um idioma de origem para um idioma de destino. Parâmetros incluem o texto, a sigla do idioma de origem e a sigla do idioma de destino (ex: 'pt', 'en')."
+    },
+    {
+        "id": "T019",
+        "name": "verificar_ortografia",
+        "description": "Analisa um texto em busca de erros ortográficos, retornando uma lista de palavras incorretas juntamente com sugestões de correção."
+    },
+    {
+        "id": "T020",
+        "name": "gerar_resumo_texto",
+        "description": "Produz um resumo conciso de um texto longo, destacando as frases e conceitos mais relevantes."
+    },
+    {
+        "id": "T021",
+        "name": "somar_numeros",
+        "description": "Recebe uma lista de números inteiros ou de ponto flutuante e retorna a soma total."
+    },
+    {
+        "id": "T022",
+        "name": "calcular_raiz_quadrada",
+        "description": "Calcula a raiz quadrada de um número positivo fornecido. Retorna erro matemático se o número for negativo."
+    },
+    {
+        "id": "T023",
+        "name": "gerar_numero_aleatorio",
+        "description": "Gera um número inteiro aleatório contido dentro de um intervalo definido pelos parâmetros 'min' e 'max'."
+    },
+    {
+        "id": "T024",
+        "name": "calcular_media",
+        "description": "Calcula a média aritmética simples de um conjunto de valores numéricos."
+    },
+    {
+        "id": "T025",
+        "name": "resolver_equacao_segundo_grau",
+        "description": "Calcula as raízes reais de uma equação do segundo grau (ax² + bx + c = 0) utilizando a fórmula de Bhaskara. Retorna um array com os valores ou vazio se não houver raízes reais."
+    },
+    {
+        "id": "T026",
+        "name": "converter_bases_numericas",
+        "description": "Converte um número de uma base para outra (ex: decimal para binário, hexadecimal para octal)."
+    },
+    {
+        "id": "T027",
+        "name": "calcular_fatorial",
+        "description": "Retorna o fatorial de um número inteiro não negativo. Limita-se a calcular fatoriais até 170 para evitar overflow computacional padrão."
+    },
+    {
+        "id": "T028",
+        "name": "calcular_juros_compostos",
+        "description": "Calcula o montante final após a aplicação de juros compostos. Parâmetros: capital inicial, taxa de juros anual e período em meses."
+    },
+    {
+        "id": "T029",
+        "name": "converter_moeda",
+        "description": "Converte valores entre duas moedas diferentes com base nas taxas de câmbio comerciais atualizadas diariamente. Requer moeda de origem, moeda de destino e o valor."
+    },
+    {
+        "id": "T030",
+        "name": "converter_temperatura",
+        "description": "Converte temperaturas entre as escalas Celsius, Fahrenheit e Kelvin."
+    },
+    {
+        "id": "T031",
+        "name": "obter_data_atual",
+        "description": "Retorna a data e hora atual do sistema em formato ISO-8601 (ex: 2023-10-25T14:30:00Z)."
+    },
+    {
+        "id": "T032",
+        "name": "adicionar_dias_data",
+        "description": "Adiciona ou subtrai um número específico de dias a uma data fornecida, retornando a nova data calculada."
+    },
+    {
+        "id": "T033",
+        "name": "calcular_diferenca_datas",
+        "description": "Calcula a diferença exata entre duas datas, retornando o resultado em dias, horas, minutos e segundos."
+    },
+    {
+        "id": "T034",
+        "name": "formatar_data_hora",
+        "description": "Recebe um objeto de data ou string de data genérica e converte para um formato de string especificado (ex: 'DD/MM/YYYY')."
+    },
+    {
+        "id": "T035",
+        "name": "converter_fuso_horario",
+        "description": "Converte uma data e hora de um fuso horário de origem para um fuso horário de destino, considerando regras de horário de verão vigentes."
+    },
+    {
+        "id": "T036",
+        "name": "verificar_ano_bissexto",
+        "description": "Determina se um ano fornecido (inteiro de quatro dígitos) é bissexto segundo as regras do calendário gregoriano."
+    },
+    {
+        "id": "T037",
+        "name": "converter_timestamp_unix",
+        "description": "Transforma um timestamp Unix (segundos desde 1 de janeiro de 1970) em uma data e hora legível."
+    },
+    {
+        "id": "T038",
+        "name": "listar_feriados_nacionais",
+        "description": "Retorna uma lista dos feriados nacionais para um país e ano especificados. Os parâmetros são o código do país em formato ISO (ex: 'BR') e o ano (ex: 2024)."
+    },
+    {
+        "id": "T039",
+        "name": "verificar_dia_util",
+        "description": "Verifica se uma data fornecida cai em um fim de semana, retornando um valor booleano."
+    },
+    {
+        "id": "T040",
+        "name": "gerar_expressao_cron",
+        "description": "Cria uma string no formato CRON padrão baseada em parâmetros descritivos como minuto, hora, dia do mês, mês e dia da semana."
+    },
+    {
+        "id": "T041",
+        "name": "criar_evento_calendario",
+        "description": "Adiciona um novo evento a um calendário. Necessita do título do evento, data de início e data de término. Retorna o ID do evento criado."
+    },
+    {
+        "id": "T042",
+        "name": "buscar_eventos_dia",
+        "description": "Lista todos os eventos agendados em um calendário específico para uma determinada data."
+    },
+    {
+        "id": "T043",
+        "name": "excluir_evento_calendario",
+        "description": "Remove um evento do calendário através do seu ID identificador único."
+    },
+    {
+        "id": "T044",
+        "name": "atualizar_evento_calendario",
+        "description": "Modifica os dados de um evento existente, como alteração do horário, título ou local."
+    },
+    {
+        "id": "T045",
+        "name": "verificar_disponibilidade_horario",
+        "description": "Analisa o calendário para checar se um intervalo de tempo específico está livre ou ocupado."
+    },
+    {
+        "id": "T046",
+        "name": "listar_calendarios_disponiveis",
+        "description": "Retorna os nomes e IDs de todos os calendários configurados e acessíveis pela conta atual."
+    },
+    {
+        "id": "T047",
+        "name": "convidar_participante_evento",
+        "description": "Adiciona um endereço de e-mail à lista de convidados de um evento existente, enviando a notificação de convite correspondente."
+    },
+    {
+        "id": "T048",
+        "name": "obter_detalhes_evento",
+        "description": "Recupera todas as informações de um evento a partir do seu ID, incluindo descrição, local, lista de convidados e status de resposta."
+    },
+    {
+        "id": "T049",
+        "name": "cancelar_reuniao",
+        "description": "Muda o status de um evento para 'cancelado' e opcionalmente notifica os participantes, mantendo o registro no calendário."
+    },
+    {
+        "id": "T050",
+        "name": "gerar_link_videoconferencia",
+        "description": "Gera uma nova sala ou link para reunião online e o anexa a um evento previamente criado."
+    },
+    {
+        "id": "T051",
+        "name": "adicionar_tarefa",
+        "description": "Cria um novo item em uma lista de tarefas, contendo um título, descrição opcional e data de vencimento."
+    },
+    {
+        "id": "T052",
+        "name": "marcar_tarefa_concluida",
+        "description": "Altera o status de uma tarefa para 'concluída'. Requer o ID da tarefa como entrada."
+    },
+    {
+        "id": "T053",
+        "name": "listar_tarefas_pendentes",
+        "description": "Recupera todos os itens de uma lista de tarefas que ainda não foram marcados como concluídos."
+    },
+    {
+        "id": "T054",
+        "name": "excluir_tarefa",
+        "description": "Remove permanentemente um item da lista de tarefas, independente de seu status de conclusão."
+    },
+    {
+        "id": "T055",
+        "name": "definir_prioridade_tarefa",
+        "description": "Atribui um nível de prioridade (Baixa, Média, Alta) a uma tarefa existente para facilitar a ordenação."
+    },
+    {
+        "id": "T056",
+        "name": "atribuir_tarefa_usuario",
+        "description": "Associa uma tarefa específica a um membro de equipe, utilizando o ID ou nome de usuário correspondente."
+    },
+    {
+        "id": "T057",
+        "name": "criar_projeto_tarefas",
+        "description": "Gera um novo projeto ou quadro Kanban vazio para o agrupamento e gestão de múltiplas tarefas relacionadas."
+    },
+    {
+        "id": "T058",
+        "name": "mover_tarefa_coluna",
+        "description": "Move um cartão de tarefa de uma coluna para outra em um quadro de gestão visual (ex: de 'A Fazer' para 'Em Progresso')."
+    },
+    {
+        "id": "T059",
+        "name": "adicionar_comentario_tarefa",
+        "description": "Insere um comentário de texto em uma tarefa específica para registrar atualizações de progresso ou comunicação da equipe."
+    },
+    {
+        "id": "T060",
+        "name": "buscar_tarefa_por_tag",
+        "description": "Filtra e retorna todas as tarefas de um projeto que possuam uma etiqueta (tag) específica associada."
+    },
+    {
+        "id": "T061",
+        "name": "criar_nota_texto",
+        "description": "Armazena um bloco de texto estruturado em um sistema de anotações. Recebe título e conteúdo."
+    },
+    {
+        "id": "T062",
+        "name": "buscar_nota_por_palavra",
+        "description": "Realiza uma pesquisa em todos os documentos de anotações procurando por correspondências de uma palavra-chave."
+    },
+    {
+        "id": "T063",
+        "name": "atualizar_conteudo_nota",
+        "description": "Substitui ou anexa novos dados ao conteúdo de uma nota existente identificada pelo seu ID."
+    },
+    {
+        "id": "T064",
+        "name": "excluir_nota",
+        "description": "Apaga um documento de anotação do sistema."
+    },
+    {
+        "id": "T065",
+        "name": "organizar_notas_pasta",
+        "description": "Move uma ou mais notas para uma estrutura de diretório lógico ou pasta no sistema de anotações."
+    },
+    {
+        "id": "T066",
+        "name": "listar_tags_notas",
+        "description": "Retorna uma lista contendo todas as etiquetas únicas que já foram aplicadas às notas do usuário."
+    },
+    {
+        "id": "T067",
+        "name": "fixar_nota_topo",
+        "description": "Sinaliza uma nota para que ela apareça sempre no início das listas e visualizações, recebendo destaque."
+    },
+    {
+        "id": "T068",
+        "name": "compartilhar_nota_link",
+        "description": "Gera um URL de acesso público com permissões apenas de leitura para uma nota específica."
+    },
+    {
+        "id": "T069",
+        "name": "exportar_nota_pdf",
+        "description": "Converte o conteúdo textual de uma nota para um documento PDF, preservando títulos e formatação básica."
+    },
+    {
+        "id": "T070",
+        "name": "gerar_indice_notas",
+        "description": "Compila uma lista de títulos de notas de uma determinada categoria com hyperlinks internos, funcionando como um índice ou tabela de conteúdos."
+    },
+    {
+        "id": "T071",
+        "name": "filtrar_tabela_csv",
+        "description": "Processa dados no formato CSV e retorna apenas as linhas que cumprem uma condição de filtro especificada em determinada coluna."
+    },
+    {
+        "id": "T072",
+        "name": "ordenar_linhas_dados",
+        "description": "Recebe uma matriz de dados ou array JSON e a ordena com base nos valores de um campo ou coluna escolhida, de forma ascendente ou descendente."
+    },
+    {
+        "id": "T073",
+        "name": "agrupar_dados_por_coluna",
+        "description": "Semelhante à função 'GROUP BY' do SQL, agrupa dados com base nos valores de uma coluna e gera contagens ou resumos para os grupos."
+    },
+    {
+        "id": "T074",
+        "name": "calcular_soma_coluna",
+        "description": "Itera sobre uma matriz de dados e calcula a soma total de todos os valores numéricos presentes em uma coluna específica."
+    },
+    {
+        "id": "T075",
+        "name": "converter_csv_para_json",
+        "description": "Lê uma string formatada em CSV (Valores Separados por Vírgula) e converte sua estrutura para uma lista de objetos JSON correspondentes."
+    },
+    {
+        "id": "T076",
+        "name": "mesclar_fontes_dados",
+        "description": "Realiza uma operação de 'Join' combinando dois conjuntos de dados diferentes usando uma coluna chave em comum."
+    },
+    {
+        "id": "T077",
+        "name": "remover_linhas_duplicadas",
+        "description": "Analisa uma tabela e exclui registros inteiros que sejam cópias exatas de outras linhas previamente existentes no conjunto."
+    },
+    {
+        "id": "T078",
+        "name": "extrair_amostra_aleatoria",
+        "description": "Seleciona e retorna um número fixo de linhas de um conjunto de dados maior de maneira aleatória, útil para análises parciais."
+    },
+    {
+        "id": "T079",
+        "name": "criar_tabela_dinamica",
+        "description": "Gera uma tabela pivô (pivot table) a partir de dados tabulares brutos, consolidando e resumindo variáveis selecionadas."
+    },
+    {
+        "id": "T080",
+        "name": "extrair_coluna_especifica",
+        "description": "Recebe um conjunto de dados e o nome de uma coluna, retornando um vetor linear (array) contendo apenas os dados dessa coluna."
+    },
+    {
+        "id": "T081",
+        "name": "executar_query_sql_leitura",
+        "description": "Executa uma instrução SQL 'SELECT' em um banco de dados relacional conectado. Recebe a query como string e retorna os resultados, impedindo operações destrutivas."
+    },
+    {
+        "id": "T082",
+        "name": "listar_tabelas_banco",
+        "description": "Retorna uma lista contendo os nomes de todas as tabelas e visualizações (views) existentes no esquema de banco de dados atual."
+    },
+    {
+        "id": "T083",
+        "name": "obter_esquema_tabela",
+        "description": "Retorna os metadados de uma tabela SQL específica, detalhando os nomes de todas as suas colunas e os respectivos tipos de dados (ex: VARCHAR, INT)."
+    },
+    {
+        "id": "T084",
+        "name": "inserir_registro_banco",
+        "description": "Adiciona uma nova linha de dados a uma tabela do banco de dados, utilizando os parâmetros de chave-valor fornecidos de forma segura e parametrizada."
+    },
+    {
+        "id": "T085",
+        "name": "atualizar_registro_banco",
+        "description": "Modifica informações de uma linha existente no banco de dados. Exige os valores a serem atualizados e as condições da cláusula 'WHERE' para evitar modificações indesejadas."
+    },
+    {
+        "id": "T086",
+        "name": "excluir_registro_banco",
+        "description": "Remove uma ou mais linhas de uma tabela com base nos parâmetros e restrições informados."
+    },
+    {
+        "id": "T087",
+        "name": "exportar_dump_banco",
+        "description": "Inicia um processo de exportação (backup) da estrutura e dados de um banco de dados selecionado, gerando um arquivo de script."
+    },
+    {
+        "id": "T088",
+        "name": "contar_linhas_tabela",
+        "description": "Realiza uma consulta do tipo 'COUNT(*)' e retorna rapidamente o total exato de registros em uma tabela."
+    },
+    {
+        "id": "T089",
+        "name": "criar_indice_coluna",
+        "description": "Gera um índice de banco de dados para uma coluna com o objetivo de acelerar futuras consultas de busca e filtragem sobre ela."
+    },
+    {
+        "id": "T090",
+        "name": "analisar_performance_query",
+        "description": "Executa um comando 'EXPLAIN' ou equivalente sobre uma query SQL fornecida e retorna o plano de execução, detalhando varreduras de índices e gargalos de performance."
+    },
+    {
+        "id": "T091",
+        "name": "fazer_requisicao_http_get",
+        "description": "Realiza uma requisição HTTP via método GET para uma URL específica, permitindo envio de headers customizados, e retorna o status code e corpo da resposta."
+    },
+    {
+        "id": "T092",
+        "name": "fazer_requisicao_http_post",
+        "description": "Envia um payload de dados, tipicamente em formato JSON ou form-data, via requisição HTTP POST para uma API ou endpoint web."
+    },
+    {
+        "id": "T093",
+        "name": "baixar_arquivo_url",
+        "description": "Faz o download do conteúdo de uma URL pública e salva o fluxo de bytes em um arquivo local utilizando o diretório temporário."
+    },
+    {
+        "id": "T094",
+        "name": "analisar_html_dom",
+        "description": "Recebe o código-fonte HTML de uma página e permite realizar buscas usando seletores CSS (ex: extrair textos de classes ou tags específicas)."
+    },
+    {
+        "id": "T095",
+        "name": "extrair_links_pagina_web",
+        "description": "Analisa o conteúdo HTML de uma página informada, localiza todas as tags 'a' com atributos 'href' válidos e retorna a lista de links encontrados."
+    },
+    {
+        "id": "T096",
+        "name": "consultar_registro_dns",
+        "description": "Realiza consultas em servidores de DNS para obter os registros associados a um domínio, como endereços IP (A), correio eletrônico (MX) e textos (TXT)."
+    },
+    {
+        "id": "T097",
+        "name": "verificar_status_site",
+        "description": "Ferramenta de uptime simples que testa se uma URL está acessível, retornando seu código HTTP de resposta (ex: 200, 404, 500) e o tempo de latência em milissegundos."
+    },
+    {
+        "id": "T098",
+        "name": "enviar_webhook",
+        "description": "Dispara uma carga de informações pré-definidas para uma URL de webhook registrada, comumente utilizada para integrar notificações entre sistemas."
+    },
+    {
+        "id": "T099",
+        "name": "validar_json_schema",
+        "description": "Verifica se uma resposta ou objeto JSON fornecido está em total conformidade com a estrutura, tipos e campos obrigatórios de um JSON Schema definido."
+    },
+    {
+        "id": "T100",
+        "name": "decodificar_token_jwt",
+        "description": "Decodifica a porção pública (payload) de um JSON Web Token (JWT) informando as claims contidas, sem realizar a validação matemática de assinatura."
+    },
+    {
+        "id": "T101",
+        "name": "enviar_email_simples",
+        "description": "Compõe e envia um correio eletrônico utilizando um servidor SMTP configurado. Requer destinatário, assunto e corpo da mensagem (texto plano ou HTML básico)."
+    },
+    {
+        "id": "T102",
+        "name": "ler_caixa_entrada_recente",
+        "description": "Obtém os metadados dos últimos e-mails recebidos, retornando título, remetente e data, visando verificação de novas mensagens não lidas."
+    },
+    {
+        "id": "T103",
+        "name": "buscar_email_assunto",
+        "description": "Procura na caixa de correio por mensagens cujo título de assunto contenha uma string ou palavra-chave especificada."
+    },
+    {
+        "id": "T104",
+        "name": "mover_email_pasta",
+        "description": "Altera um e-mail de um diretório virtual para outro (por exemplo, movendo da 'Caixa de Entrada' para 'Arquivo')."
+    },
+    {
+        "id": "T105",
+        "name": "marcar_email_como_lido",
+        "description": "Remove a flag de 'não lido' de um e-mail específico, marcando-o como visualizado pelo usuário."
+    },
+    {
+        "id": "T106",
+        "name": "enviar_mensagem_chat_equipe",
+        "description": "Publica uma mensagem de texto em um canal específico de uma plataforma corporativa de mensagens, como Slack ou Microsoft Teams."
+    },
+    {
+        "id": "T107",
+        "name": "criar_canal_comunicacao",
+        "description": "Inicia uma nova sala de chat ou canal de mensagens de texto dentro de uma plataforma corporativa, definindo seu nome e descrição."
+    },
+    {
+        "id": "T108",
+        "name": "listar_usuarios_canal",
+        "description": "Busca e retorna a lista de participantes e membros que possuem acesso a uma sala ou canal de chat privado."
+    },
+    {
+        "id": "T109",
+        "name": "agendar_envio_mensagem",
+        "description": "Configura uma mensagem para ser automaticamente enviada para um chat ou e-mail em uma data e horário futuro predeterminado."
+    },
+    {
+        "id": "T110",
+        "name": "arquivar_chat",
+        "description": "Oculta e arquiva um canal de conversação inativo, removendo-o da barra lateral, mas preservando o histórico de mensagens."
+    },
+    {
+        "id": "T111",
+        "name": "criar_issue_repositorio",
+        "description": "Abre um novo tíquete (issue) de relato de bug ou funcionalidade em um gerenciador de código-fonte, recebendo título, corpo detalhado e labels opcionais."
+    },
+    {
+        "id": "T112",
+        "name": "fechar_issue",
+        "description": "Altera o status de um tíquete de desenvolvimento em aberto para fechado, podendo incluir um comentário de justificativa."
+    },
+    {
+        "id": "T113",
+        "name": "adicionar_label_issue",
+        "description": "Anexa uma etiqueta de categorização (ex: 'bug', 'enhancement') a um tíquete existente para facilitar o filtro e triagem de problemas."
+    },
+    {
+        "id": "T114",
+        "name": "listar_pull_requests_abertos",
+        "description": "Retorna uma visão geral de todos os PRs (Pull Requests) que aguardam revisão de código na ramificação (branch) principal de um projeto."
+    },
+    {
+        "id": "T115",
+        "name": "aprovar_pull_request",
+        "description": "Registra uma revisão positiva com o status de 'Aprovado' em um PR, autorizando a mesclagem de código se as políticas de CI permitirem."
+    },
+    {
+        "id": "T116",
+        "name": "comentar_pull_request",
+        "description": "Insere uma mensagem de feedback geral ou relacionada a uma linha de código específica durante a revisão de um Pull Request."
+    },
+    {
+        "id": "T117",
+        "name": "listar_repositorios_usuario",
+        "description": "Coleta e exibe o nome e visibilidade de todos os projetos de software hospedados vinculados à conta de um usuário do sistema."
+    },
+    {
+        "id": "T118",
+        "name": "obter_metricas_commits",
+        "description": "Calcula a contagem de contribuições e adições de linhas de código efetuadas por desenvolvedores durante um período específico."
+    },
+    {
+        "id": "T119",
+        "name": "gerar_changelog_versao",
+        "description": "Gera um documento automático agrupando as descrições dos merges e commits mais recentes, formatado como um registro de alterações (changelog) de software."
+    },
+    {
+        "id": "T120",
+        "name": "associar_commit_issue",
+        "description": "Vincula um hash de commit específico à interface visual de uma issue relacionada, garantindo rastreabilidade do código fonte modificado."
+    },
+    {
+        "id": "T121",
+        "name": "executar_commit_git",
+        "description": "Cria um commit em um repositório git local utilizando os arquivos que já foram adicionados à área de staging (staging area), acompanhado de uma mensagem descritiva."
+    },
+    {
+        "id": "T122",
+        "name": "criar_branch_git",
+        "description": "Gera uma nova ramificação a partir do branch atual em um sistema de controle de versão, essencial para o desenvolvimento de novas features de forma isolada."
+    },
+    {
+        "id": "T123",
+        "name": "mesclar_branch_git",
+        "description": "Executa uma operação de 'merge', juntando as alterações de código de um branch de origem diretamente para o branch atual ativo."
+    },
+    {
+        "id": "T124",
+        "name": "reverter_commit_git",
+        "description": "Cria um novo commit cuja função é desfazer exatamente as modificações textuais inseridas por um commit anterior referenciado pelo seu hash."
+    },
+    {
+        "id": "T125",
+        "name": "listar_historico_commits",
+        "description": "Retorna o log do repositório, exibindo o hash, nome do autor, data e mensagem dos últimos commits realizados em sequência cronológica."
+    },
+    {
+        "id": "T126",
+        "name": "obter_diff_codigo",
+        "description": "Mostra detalhadamente as adições e deleções de linhas em arquivos de texto comparando dois pontos no histórico do projeto ou dois branches."
+    },
+    {
+        "id": "T127",
+        "name": "criar_tag_versao",
+        "description": "Marca um estado específico do repositório, frequentemente utilizado para demarcar pontos de liberação (releases) como 'v1.0.0'."
+    },
+    {
+        "id": "T128",
+        "name": "buscar_blame_arquivo",
+        "description": "Identifica a revisão (commit) e o autor responsável pela última modificação de cada linha de um arquivo de código-fonte especificado."
+    },
+    {
+        "id": "T129",
+        "name": "clonar_repositorio",
+        "description": "Cópia completa de um repositório Git remoto para o sistema de arquivos local, baixando todos os objetos, branches e histórico completo."
+    },
+    {
+        "id": "T130",
+        "name": "adicionar_arquivos_staging",
+        "description": "Adiciona os arquivos modificados selecionados para a zona de preparação (index), tornando-os prontos para o próximo processo de commit."
+    },
+    {
+        "id": "T131",
+        "name": "formatar_codigo_fonte",
+        "description": "Aciona uma ferramenta de formatação padrão (como Prettier ou Black) para reorganizar os espaços em branco e a identação de um arquivo de código."
+    },
+    {
+        "id": "T132",
+        "name": "executar_linter_estatico",
+        "description": "Analisa o código-fonte em busca de falhas estilísticas, uso de variáveis não declaradas ou violações de boas práticas usando configurações de linting (ex: ESLint)."
+    },
+    {
+        "id": "T133",
+        "name": "executar_testes_unitarios",
+        "description": "Dispara uma suíte de testes de software especificada, retornando quais asserções passaram e quais falharam, juntamente com rastros de pilha (stack traces) das falhas."
+    },
+    {
+        "id": "T134",
+        "name": "gerar_relatorio_cobertura",
+        "description": "Mede a porcentagem de linhas, funções e ramificações do código que foram efetivamente executadas durante a execução dos testes automatizados."
+    },
+    {
+        "id": "T135",
+        "name": "analisar_complexidade_ciclomatica",
+        "description": "Analisa uma função ou arquivo fornecido e calcula uma métrica de software que indica a quantidade de caminhos independentes através do código, como loops e condicionais."
+    },
+    {
+        "id": "T136",
+        "name": "ofuscar_codigo",
+        "description": "Processa um arquivo legível por humanos para transformá-lo num formato funcionalmente idêntico, porém difícil de compreender, renomeando variáveis para nomes curtos."
+    },
+    {
+        "id": "T137",
+        "name": "compilar_codigo",
+        "description": "Chama um compilador (como o GCC) para converter arquivos de código-fonte de uma linguagem compilada em um programa binário executável."
+    },
+    {
+        "id": "T138",
+        "name": "extrair_docstrings",
+        "description": "Analisa a sintaxe de um código e extrai os comentários de documentação embutidos nas funções, gerando uma estrutura útil para a criação de sites de documentação de APIs."
+    },
+    {
+        "id": "T139",
+        "name": "verificar_vulnerabilidades_dependencias",
+        "description": "Cruza a lista de pacotes e bibliotecas utilizadas no projeto com bancos de dados de segurança públicos para alertar sobre versões defasadas e propensas a riscos conhecidos."
+    },
+    {
+        "id": "T140",
+        "name": "minificar_arquivo",
+        "description": "Remove todos os espaços em branco, quebras de linha e comentários de um arquivo CSS, HTML ou JS para reduzir seu tamanho físico para distribuição web."
+    },
+    {
+        "id": "T141",
+        "name": "buscar_logs_erro",
+        "description": "Busca arquivos de log do sistema ou de uma aplicação específica retornando as últimas N linhas que contenham as palavras 'ERROR', 'Exception' ou 'FATAL'."
+    },
+    {
+        "id": "T142",
+        "name": "exportar_logs_periodo",
+        "description": "Comprime e empacota registros gerados durante um intervalo de tempo definido em horas ou dias em um formato de arquivo único para facilidade de envio."
+    },
+    {
+        "id": "T143",
+        "name": "contar_ocorrencias_log",
+        "description": "Processa e agrupa linhas de logs para indicar quantas vezes um tipo específico de evento ou padrão regex aconteceu nas últimas horas."
+    },
+    {
+        "id": "T144",
+        "name": "analisar_latencia_api",
+        "description": "Acessa registros do servidor web e extrai a média estatística de tempo em milissegundos demorada para as respostas dos endpoints."
+    },
+    {
+        "id": "T145",
+        "name": "verificar_uso_cpu",
+        "description": "Retorna as métricas atuais de consumo do processador, divididas entre tempo do sistema, tempo do usuário e ociosidade em formato percentual."
+    },
+    {
+        "id": "T146",
+        "name": "verificar_memoria_disponivel",
+        "description": "Consulta o sistema operacional e retorna o total de memória RAM física da máquina, quantidade em uso, buffers/cache e a fração de memória livre e segura para alocação."
+    },
+    {
+        "id": "T147",
+        "name": "listar_processos_ativos",
+        "description": "Gera um relatório, similar ao comando 'top' ou 'Task Manager', detalhando os programas em execução ordenados pelo nível de consumo de recursos."
+    },
+    {
+        "id": "T148",
+        "name": "reiniciar_servico_sistema",
+        "description": "Envia um comando para parar e em seguida iniciar novamente um serviço gerenciado pelo sistema em background, como um servidor de banco de dados (requer permissão de serviço)."
+    },
+    {
+        "id": "T149",
+        "name": "criar_alerta_monitoramento",
+        "description": "Define uma regra que dispara um evento, e-mail ou notificação se alguma métrica específica, como ocupação de disco superior a 90%, for violada."
+    },
+    {
+        "id": "T150",
+        "name": "silenciar_alerta_sistema",
+        "description": "Pausa temporariamente um alerta de monitoramento ativado por um tempo pré-determinado, durante as janelas de manutenção de servidores."
+    },
+    {
+        "id": "T151",
+        "name": "ler_arquivo_configuracao",
+        "description": "Analisa arquivos no formato INI, YAML, JSON ou XML comumente usados para configurar aplicativos e converte suas diretivas em uma estrutura chave-valor para visualização."
+    },
+    {
+        "id": "T152",
+        "name": "atualizar_variavel_ambiente",
+        "description": "Modifica ou insere uma variável de ambiente (como PATH ou chaves de desenvolvimento) no contexto em que o processo associado está sendo executado."
+    },
+    {
+        "id": "T153",
+        "name": "validar_formato_yaml",
+        "description": "Efetua uma checagem restrita de sintaxe para atestar se um bloco de texto é um YAML rigorosamente correto e indentado, relatando linha e coluna do erro caso não seja."
+    },
+    {
+        "id": "T154",
+        "name": "testar_conectividade_ping",
+        "description": "Dispara pacotes ICMP Echo Request para um endereço de host e aguarda o retorno para determinar o estado de conectividade da rede local à máquina destino."
+    },
+    {
+        "id": "T155",
+        "name": "rastrear_rota_rede",
+        "description": "Informa a sequência de equipamentos roteadores e saltos pelos quais um pacote de internet trafega a partir do equipamento atual até atingir a destinação final na web."
+    },
+    {
+        "id": "T156",
+        "name": "obter_ip_publico",
+        "description": "Recorre a um serviço externo padronizado de resolução de IPs para retornar o endereço IP externo (WAN) atual por trás do roteador e do NAT."
+    },
+    {
+        "id": "T157",
+        "name": "verificar_regra_firewall",
+        "description": "Exibe o status de regras ativas no firewall do sistema e permite confirmar se conexões vindas de certos IPs em portas específicas estão atualmente sendo descartadas ou permitidas."
+    },
+    {
+        "id": "T158",
+        "name": "listar_portas_abertas",
+        "description": "Realiza uma verificação local para identificar que serviços ou programas do sistema estão atualmente abertos e escutando conexões através de portas TCP/UDP."
+    },
+    {
+        "id": "T159",
+        "name": "calcular_subrede_ipv4",
+        "description": "Aceita um IP em formato CIDR (ex: 192.168.1.0/24) e calcula sua máscara de rede, IP de broadcast, host mínimo, host máximo e total de endereços úteis."
+    },
+    {
+        "id": "T160",
+        "name": "decodificar_certificado_ssl",
+        "description": "Analisa o conteúdo criptográfico codificado de um arquivo de certificado digital X.509 e exibe as informações contidas legíveis em texto, como emissor e data de expiração."
+    },
+    {
+        "id": "T161",
+        "name": "verificar_espaco_disco",
+        "description": "Informa o uso atual dos volumes de armazenamento disponíveis na máquina. A descrição do retorno inclui capacidade total, blocos consumidos e montante gigabytes disponíveis para gravações futuras."
+    },
+    {
+        "id": "T162",
+        "name": "criar_link_simbolico",
+        "description": "Gera um atalho avançado que faz com que uma pasta virtual aponte inteiramente e magicamente de forma transparente para um diretório real existente localizado em outro ponto."
+    },
+    {
+        "id": "T163",
+        "name": "compactar_diretorio_zip",
+        "description": "Empacota todos os arquivos de um diretório passado, respeitando a estrutura de subpastas, dentro de um arquivo finalizado de formato ZIP, possivelmente reduzindo o tamanho ocupado em disco."
+    },
+    {
+        "id": "T164",
+        "name": "extrair_arquivo_tar",
+        "description": "Descompacta e restaura todos os elementos contidos num pacote TAR ou TAR.GZ para o caminho local, reconstruindo as configurações de permissão contidas originalmente no arquivo empacotado."
+    },
+    {
+        "id": "T165",
+        "name": "alterar_permissoes_arquivo",
+        "description": "Muda a lista de controle e controle de direitos (leitura, gravação, execução) associada ao arquivo ou diretório usando formato numérico octal padronizado, tipo 755 ou 644."
+    },
+    {
+        "id": "T166",
+        "name": "buscar_arquivos_recentes",
+        "description": "Varre e localiza apenas arquivos em um caminho do computador cuja data de última edição seja menor ou equivalente às últimas horas ou dias estipulados via argumento de chamada."
+    },
+    {
+        "id": "T167",
+        "name": "obter_tamanho_diretorio",
+        "description": "Soma de maneira recursiva e detalhada a contagem de bytes totalizados consumidos por cada item inserido internamente no espaço do diretório selecionado."
+    },
+    {
+        "id": "T168",
+        "name": "limpar_arquivos_temporarios",
+        "description": "Inicia um procedimento que varre as localizações definidas no sistema operacional conhecidas por alocar resíduos temporários ou pastas de cache com o propósito de recuperar memória em disco ao apagá-las."
+    },
+    {
+        "id": "T169",
+        "name": "sincronizar_diretorios_locais",
+        "description": "Inicia uma cópia unidirecional robusta, checando os hashes para copiar de uma pasta de origem à de destino somente o que for um arquivo alterado ou inédito para manter espelhos backups idênticos."
+    },
+    {
+        "id": "T170",
+        "name": "buscar_arquivos_duplicados",
+        "description": "Faz uma busca complexa checando similaridades de tamanhos e de hashes criptográficos e reportando quais diferentes caminhos na máquina contêm exatamente a mesmíssima coisa."
+    },
+    {
+        "id": "T171",
+        "name": "redimensionar_imagem_raster",
+        "description": "Escala e redimensiona matrizes visuais contidas em JPGs ou PNGs alterando os parâmetros de largura e altura. Aplica métodos de interpolação mantendo ou não a proporção e devolvendo a imagem no mesmo lugar."
+    },
+    {
+        "id": "T172",
+        "name": "converter_png_para_jpg",
+        "description": "Muda o tipo de codificação base das imagens transformando um PNG que admite fundo transparente no equivalente JPG mais leve para publicação web. Partes transparentes são preenchidas de cor branca ou sólida configurada."
+    },
+    {
+        "id": "T173",
+        "name": "extrair_metadados_exif",
+        "description": "Examina e relata sobre dados confidenciais incrustados no cabeçalho das fotografias oriundas de câmeras, apresentando dados da lente, do sensor, uso do flash, abertura e timestamp da produção da imagem."
+    },
+    {
+        "id": "T174",
+        "name": "aplicar_filtro_imagem_cinza",
+        "description": "Gera cálculos iterativos nos pixels da representação fotográfica, transformando espectros vibrantes de cor e luminância em representações puramente e unicamente formadas nos canais equivalentes à cor cinza/preta e branca."
+    },
+    {
+        "id": "T175",
+        "name": "cortar_trecho_audio",
+        "description": "Pega o recurso, isola um momento sonoro pelo meio ou pela sua parte através do tempo em segundos estipulados para início do corte bem como momento exato para fechamento."
+    },
+    {
+        "id": "T176",
+        "name": "converter_video_resolucao",
+        "description": "Renderiza mídia base para novos codecs e/ou reestrutura seu campo vetorial em resoluções mais comedidas para redes sociais. Processa o render por algum tempo."
+    },
+    {
+        "id": "T177",
+        "name": "extrair_frame_video",
+        "description": "Analisa o arquivo MP4 ou correspondente gravado extraindo e guardando precisamente no instante informado de milissegundos uma captura de tela fixa formatada em PNG de altíssima qualidade."
+    },
+    {
+        "id": "T178",
+        "name": "gerar_thumbnail_imagem",
+        "description": "Processo agressivamente veloz que pega matrizes absurdamente gigantescas e recorta-as a limites de 100 por 100 pontos visando uso unicamente para prever, gerar galerias menores e atuar de maneira ágil nas UIs da aplicação cliente."
+    },
+    {
+        "id": "T179",
+        "name": "reconhecer_texto_imagem_ocr",
+        "description": "Busca acionar rotinas de redes neurais convolucionais focadas de Tesseract (Optical Character Recognition) em busca de encontrar letras tipográficas desenhadas na cena para passá-las ao modelo como letras literais e string reais usáveis."
+    },
+    {
+        "id": "T180",
+        "name": "normalizar_volume_audio",
+        "description": "Técnica para igualar ou padronizar picos sonoros. Ajusta gravações baixas com ganho matemático ou atende a requisições de redução base de limites sonoros impedindo som ambiente muito forte de vazar picos sonoros absurdos no final processado."
+    },
+    {
+        "id": "T181",
+        "name": "obter_coordenadas_endereco",
+        "description": "Usa um serviço global de mapas para submeter e processar endereços lógicos, nome de rua com número e estado, decodificando e devolvendo uma latitude combinada a uma longitude (Geocoding)."
+    },
+    {
+        "id": "T182",
+        "name": "calcular_distancia_geografica",
+        "description": "Utilizando duas localidades fornecidas com suas devidas latitudes e longitudes exatas, executa o cálculo avançado vetorial de aproximação conhecido como Fórmula Haversine retornando quantos metros distanciam fisicamente um ponto ao outro de maneira linear reta baseada na esféra global."
+    },
+    {
+        "id": "T183",
+        "name": "buscar_previsao_tempo_dias",
+        "description": "Interroga interfaces de clima governamentais ou de centros meteorológicos indicando um ponto geográfico referenciado e listando projeções futuras meteorológicas englobando temperadura (graus) máxima e indicativos de possibilidade forte de precipitação."
+    },
+    {
+        "id": "T184",
+        "name": "obter_clima_condicao_atual",
+        "description": "Retorna uma foto momentânea indicando qual as realidades de temperatura exata, nível de luz, ventos e porcentagem indicativa da umidade do céu nos últimos poucos minutos em certa cidade. Ideal e muito pontual apenas informacionalmente imediato."
+    },
+    {
+        "id": "T185",
+        "name": "listar_cidades_proximas_raio",
+        "description": "Garante listar municípios próximos se encaixando nas exigências do argumento que solicita um centro focal e a dimensão máxima base que esse círculo abrange limitando em um raio circular em km em que as cidades listadas aparecerão ali contidas perfeitamente."
+    },
+    {
+        "id": "T186",
+        "name": "buscar_endereco_por_cep",
+        "description": "Dado uma numeração CEP no formato correto Brasileiro de 8 digitações estritas, realiza a descoberta de detalhes precisos indicando nomes padronizados dos bairros e as extensões lógicas viárias até onde essa informação tiver precisão para esse logradouro especificado."
+    },
+    {
+        "id": "T187",
+        "name": "converter_coordenadas_utm",
+        "description": "Dedicado ao mundo topográfico converte latitude e longitude habituais esféricas no modo decimal ou minutos, passando pro padrão planar com precisão linear bidimensional chamada UTM."
+    },
+    {
+        "id": "T188",
+        "name": "encontrar_rota_mais_curta",
+        "description": "Fornecido nó central base origem combinando aos demais para ser listada matriz. Baseia-se em consultar as malhas abertas estradeiras desenhando instruções sobre as esquinas apropriadas até atingir o traçado menos percorrido possível e gerando os guias por escrito que as montam."
+    },
+    {
+        "id": "T189",
+        "name": "obter_fuso_horario_localizacao",
+        "description": "Localiza de qual Timezone aquela área no planeta reporta. Atendendo de forma extremamente vital situações de marcação via globo. Requer Coordenadas devolvendo uma métrica como 'America/Sao_Paulo'."
+    },
+    {
+        "id": "T190",
+        "name": "consultar_elevacao_terreno",
+        "description": "Apresentando qualquer pino terrestre ou coordenada, vasculha base mapeadora geológica de modelos digitais terrestres devolvendo os cômputos calculados determinando qual é a altura topográfica pura dessa localização em referencial imediato ao chamado nível médio geral do mar oceânico atual."
+    },
+    {
+        "id": "T191",
+        "name": "calcular_roi_investimento",
+        "description": "Avalia o Retorno sobre Investimento calculado por valores financeiros básicos inseridos. Recebe custo do investimento e o lucro ganho obtido. Subtrai investimento do lucro da base calculada, dividindo também para calcular rendimento financeiro expresso no padrão indicativo por valor porcentual clássico da economia base e de negócios."
+    },
+    {
+        "id": "T192",
+        "name": "calcular_amortizacao_sac",
+        "description": "Sistema processador e construtor relacional que simula linhas que se abatem mês ao mês. Aceitando valor emprestado, prazos para o término listado a juro anual para desenhar parcelamento mensal de débitos usando a rotina base SAC, entregando montantes a pagar mensais em matriz relacional contínua gradualmente reduzida."
+    },
+    {
+        "id": "T193",
+        "name": "buscar_cotacao_acao_bolsa",
+        "description": "Através de código identificador como padrão TICKER usado e conhecido na bolsa, processa interrogações da api retornando preço corrente estrito de abertura e fechamento assim como movimentações intradiárias baseadas somente no período da negociação financeira atual do último e corrente dia avaliado."
+    },
+    {
+        "id": "T194",
+        "name": "pesquisar_artigo_academico",
+        "description": "Comunica-se usando motores base de buscas de repositórios conhecidos contendo referências científicas (Crossref) que buscam termos para tentar alinhar um conjunto rico mostrando lista e resumo dos estudos pertinentes listados ordenados sobre referências da palavra, extraindo links dos periódicos abertos da publicação ou nomes dos que construíram."
+    },
+    {
+        "id": "T195",
+        "name": "gerar_citacao_abnt",
+        "description": "Preenchendo um modelo com informações obrigatórias da bibliografia como autoria, data ano, nome de produção e revista correspondente a ferramenta se engarrega estritamente e organizadamente de aplicar vírgulas e maiúsculas ditadas fortemente e exatas como pede e rege os conformes do padrão exigente do normativo modelo de citação textual."
+    },
+    {
+        "id": "T196",
+        "name": "formatar_referencia_apa",
+        "description": "Análise estrita de montagem voltada perfeitamente na criação das referências bibliográficas mas seguindo pontualmente o regramento normativo anglo-americano estrito ditado nas diretrizes e guias rigorosamente feitos ao modo de citação focado especificamente chamado APA que alinha textos finais."
+    },
+    {
+        "id": "T197",
+        "name": "buscar_sinonimos_palavra",
+        "description": "Recebe apenas e unicamente uma palavra textual e em retorno extrai dos dicionários em formato léxico conjuntos paralelos com mesmo indicativo semântico útil quando necessário aumentar o volume linguístico com riqueza e evitando as repetitividades nas redações literárias finais do utente ativo."
+    },
+    {
+        "id": "T198",
+        "name": "traduzir_codigo_morse",
+        "description": "Fará uma manipulação string bem precisa, onde letras padronizadas alfabéticas ocidentais e latinas ganham equivalência direta correspondentes em forma exata formatadas usando ponto e travessões tradicionais longos em formatação sonora emulada por código mundial, também traduzindo revertendo a mesma regra operando o caminho trocado do caractere estranho novamente ao usual texto puro latino e compreendido de forma comum visual."
+    },
+    {
+        "id": "T199",
+        "name": "gerar_codigo_qr",
+        "description": "Rotina gráfica. Ela aceitará dados estritamente de textos tipo texto URL padrão. Com base neste argumento ela cria desenhos vetoriais preenchendo malha pontilhada no formato internacional gráfico e a converte entregando ao chamador a codificação PNG dessa imagem contendo uma versão fiel representativa legível base por celular focando em ser o mais compacta se necessitar sem perdas e ruído de reconhecimento falho na hora da sua varredura no campo com as ferramentas normais prontas de telefonia móvel ou leitoras laser fixadas usadas em indústrias normais e balcões normais logísticos e mercantis locais ao sistema em questão operado centralizadamente via as camadas normais gráficas acopladas ativas operando no núcleo operatório em ação ativa contínua ou temporária para um documento gerado virtual dinamicamente para consumo."
+    },
+    {
+        "id": "T200",
+        "name": "validar_cpf_brasileiro",
+        "description": "Executa de forma algorítmica os cálculos conhecidos e previstos usando um valor CPF informado para descobrir se as casas decimais de controle correspondem ou reprovam, não informando quem, só retornando booleano indicativo. Essa utilidade foca em controle numérico, não em consultas sociais. Retorno true indica matematicamente possível. False é estruturalmente inventado."
+    }
+]
