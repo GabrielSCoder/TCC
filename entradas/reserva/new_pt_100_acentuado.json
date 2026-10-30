@@ -1,0 +1,502 @@
+[
+  {
+    "id": "B001",
+    "name": "calcular_imc",
+    "description": "Calcula o Índice de Massa Corporal (IMC) a partir do peso em quilogramas e da altura em metros fornecidos pelo usuário."
+  },
+  {
+    "id": "B002",
+    "name": "converter_medidas_comprimento",
+    "description": "Realiza a conversão de medidas de comprimento, permitindo transformar metros para pés, centímetros para polegadas ou quilômetros para milhas."
+  },
+  {
+    "id": "B003",
+    "name": "calcular_volume_esfera",
+    "description": "Calcula o volume de uma esfera utilizando a fórmula geométrica padrão, exigindo apenas o valor do raio como parâmetro de entrada."
+  },
+  {
+    "id": "B004",
+    "name": "calcular_hipotenusa",
+    "description": "Aplica o Teorema de Pitágoras para encontrar o valor da hipotenusa de um triângulo retângulo, dados os comprimentos dos dois catetos."
+  },
+  {
+    "id": "B005",
+    "name": "gerar_tabuada",
+    "description": "Gera a tabuada de multiplicação completa de um número inteiro fornecido, multiplicando-o sequencialmente de 1 a 10."
+  },
+  {
+    "id": "B006",
+    "name": "calcular_pg",
+    "description": "Encontra o enésimo termo de uma Progressão Geométrica (PG) a partir do termo inicial, da razão e do número da posição desejada."
+  },
+  {
+    "id": "B007",
+    "name": "calcular_pa",
+    "description": "Determina o valor de uma posição específica em uma Progressão Aritmética (PA), utilizando o primeiro termo e a razão fornecidos."
+  },
+  {
+    "id": "B008",
+    "name": "converter_graus_radianos",
+    "description": "Transforma o valor de um ângulo medido em graus para a sua representação equivalente em radianos matemáticos."
+  },
+  {
+    "id": "B009",
+    "name": "calcular_perimetro_circulo",
+    "description": "Calcula a circunferência (perímetro) de um círculo utilizando a constante Pi e o diâmetro informado nos parâmetros."
+  },
+  {
+    "id": "B010",
+    "name": "calcular_logaritmo",
+    "description": "Realiza o cálculo de logaritmo de um número especificado em uma base determinada (como base 10, base 2 ou logaritmo natural)."
+  },
+  {
+    "id": "B011",
+    "name": "inverter_string",
+    "description": "Recebe uma frase ou palavra e retorna a mesma string com a ordem dos caracteres completamente invertida, de trás para frente."
+  },
+  {
+    "id": "B012",
+    "name": "contar_vogais",
+    "description": "Analisa uma string de texto fornecida e contabiliza o número total de vogais (a, e, i, o, u) presentes nela, ignorando acentos."
+  },
+  {
+    "id": "B013",
+    "name": "capitalizar_palavras",
+    "description": "Formata um texto transformando a primeira letra de cada palavra presente na string em maiúscula e mantendo o resto em minúsculas."
+  },
+  {
+    "id": "B014",
+    "name": "remover_espacos_extras",
+    "description": "Limpa uma string de texto, removendo espaços duplos ou múltiplos entre as palavras e aparando os espaços no início e no fim."
+  },
+  {
+    "id": "B015",
+    "name": "converter_camel_case",
+    "description": "Transforma uma frase normal com espaços no padrão de formatação camelCase, juntando as palavras e capitalizando as iniciais a partir da segunda."
+  },
+  {
+    "id": "B016",
+    "name": "gerar_lorem_ipsum",
+    "description": "Gera parágrafos contendo texto de preenchimento (Lorem Ipsum) para serem utilizados em protótipos de design e testes de leiaute."
+  },
+  {
+    "id": "B017",
+    "name": "contar_consoantes",
+    "description": "Examina uma string e retorna a quantidade exata de caracteres que são consoantes alfabéticas, desconsiderando números e pontuações."
+  },
+  {
+    "id": "B018",
+    "name": "extrair_iniciais",
+    "description": "Recebe um nome completo como entrada e retorna uma pequena string contendo apenas as iniciais em maiúsculo (ex: João Silva -> JS)."
+  },
+  {
+    "id": "B019",
+    "name": "verificar_palindromo",
+    "description": "Verifica se uma palavra ou frase fornecida é um palíndromo, ou seja, se pode ser lida da mesma maneira da esquerda para a direita e vice-versa."
+  },
+  {
+    "id": "B020",
+    "name": "converter_snake_case",
+    "description": "Converte o texto de entrada substituindo todos os espaços em branco por caracteres de sublinhado (underscore) e passando as letras para minúsculo."
+  },
+  {
+    "id": "B021",
+    "name": "formatar_cronometro",
+    "description": "Converte um valor total em segundos para um formato amigável de relógio ou cronômetro, exibindo as horas, minutos e segundos (HH:MM:SS)."
+  },
+  {
+    "id": "B022",
+    "name": "calcular_idade_exata",
+    "description": "Calcula o tempo decorrido entre a data de nascimento informada e a data atual, retornando a idade detalhada em anos, meses e dias."
+  },
+  {
+    "id": "B023",
+    "name": "obter_dia_da_semana",
+    "description": "Recebe uma data específica no formato padrão e retorna o nome do dia da semana correspondente àquela data (ex: segunda-feira, terça-feira)."
+  },
+  {
+    "id": "B024",
+    "name": "verificar_fim_de_semana",
+    "description": "Retorna um valor verdadeiro (booleano) caso a data fornecida caia em um sábado ou domingo, e falso caso seja um dia útil normal."
+  },
+  {
+    "id": "B025",
+    "name": "converter_seculos",
+    "description": "Determina a qual século pertence um determinado ano numérico fornecido (ex: ano 1999 retorna Século XX)."
+  },
+  {
+    "id": "B026",
+    "name": "somar_semanas_data",
+    "description": "Realiza uma adição no calendário, somando uma quantidade específica de semanas inteiras a uma data base estipulada pelo usuário."
+  },
+  {
+    "id": "B027",
+    "name": "converter_minutos_para_horas",
+    "description": "Pega um valor bruto de minutos totais e o divide, retornando a conversão limpa em horas completas mais os minutos restantes."
+  },
+  {
+    "id": "B028",
+    "name": "cronograma_estudos_semanal",
+    "description": "Gera um objeto de template contendo a estrutura de sete dias da semana com espaços vazios para o preenchimento de blocos de estudo diários."
+  },
+  {
+    "id": "B029",
+    "name": "verificar_mes_comercial",
+    "description": "Consulta uma referência simples de calendário para indicar se um determinado número de mês tem normalmente 30 ou 31 dias."
+  },
+  {
+    "id": "B030",
+    "name": "calcular_trimestre",
+    "description": "Indica em qual trimestre do ano (primeiro, segundo, terceiro ou quarto) se encontra um mês especificado pelo seu número numérico."
+  },
+  {
+    "id": "B031",
+    "name": "converter_rgb_hex",
+    "description": "Transforma valores decimais de cor nos canais Red, Green e Blue (0-255) em um código de cor hexadecimal válido para uso em CSS."
+  },
+  {
+    "id": "B032",
+    "name": "converter_hex_rgb",
+    "description": "Recebe uma string de cor hexadecimal de 6 dígitos e a converte para os três valores numéricos correspondentes no padrão RGB."
+  },
+  {
+    "id": "B033",
+    "name": "formatar_cpf_mascara",
+    "description": "Pega uma sequência limpa de 11 dígitos numéricos e a formata visualmente adicionando a pontuação padrão do CPF brasileiro (XXX.XXX.XXX-XX)."
+  },
+  {
+    "id": "B034",
+    "name": "formatar_cnpj_mascara",
+    "description": "Aplica barras, pontos e traços num conjunto numérico de 14 dígitos, retornando a string formatada no padrão visual de um CNPJ."
+  },
+  {
+    "id": "B035",
+    "name": "formatar_telefone_br",
+    "description": "Adiciona os parênteses do código de área (DDD) e o traço central em uma string numérica representando um telefone celular brasileiro."
+  },
+  {
+    "id": "B036",
+    "name": "remover_mascara_numerica",
+    "description": "Limpa strings de documentos ou telefones, extraindo e retornando exclusivamente os caracteres numéricos e descartando hifens ou pontuações."
+  },
+  {
+    "id": "B037",
+    "name": "formatar_moeda_real",
+    "description": "Converte um valor numérico de ponto flutuante em uma string de exibição formatada como moeda brasileira, adicionando o prefixo R$ e duas casas decimais."
+  },
+  {
+    "id": "B038",
+    "name": "converter_bytes_megabytes",
+    "description": "Transforma um valor grande em bytes para megabytes, dividindo-o pela base adequada e retornando o resultado formatado."
+  },
+  {
+    "id": "B039",
+    "name": "converter_kilogramas_libras",
+    "description": "Calcula a conversão de massa, recebendo um valor em quilogramas e multiplicando pela constante de conversão para retornar o equivalente em libras (lbs)."
+  },
+  {
+    "id": "B040",
+    "name": "converter_litros_galoes",
+    "description": "Altera medidas de capacidade líquida do sistema métrico em litros para o sistema imperial estadunidense em galões."
+  },
+  {
+    "id": "B041",
+    "name": "ordenar_lista_alfabetica",
+    "description": "Recebe um array de palavras ou nomes e o retorna com todos os elementos ordenados estritamente na ordem do alfabeto, de A a Z."
+  },
+  {
+    "id": "B042",
+    "name": "embaralhar_lista",
+    "description": "Muda aleatoriamente a ordem de um conjunto de itens em um array, útil para randomizar alternativas ou listas de exibição na interface."
+  },
+  {
+    "id": "B043",
+    "name": "remover_duplicatas_array",
+    "description": "Processa uma lista de entrada identificando itens repetidos e retorna um novo array garantindo que cada elemento apareça apenas uma única vez."
+  },
+  {
+    "id": "B044",
+    "name": "calcular_frequencia_itens",
+    "description": "Recebe um array e retorna um objeto contendo a contagem estatística de quantas vezes cada elemento individual aparece listado no conjunto."
+  },
+  {
+    "id": "B045",
+    "name": "filtrar_numeros_pares",
+    "description": "Itera sobre uma matriz de números inteiros e devolve um novo vetor contendo exclusivamente os valores que são divisíveis por dois (números pares)."
+  },
+  {
+    "id": "B046",
+    "name": "filtrar_numeros_impares",
+    "description": "Filtra um array numérico, separando e retornando apenas os elementos que não são divisíveis por dois, ou seja, os números ímpares."
+  },
+  {
+    "id": "B047",
+    "name": "unir_listas",
+    "description": "Realiza a concatenação de dois arrays independentes enviados pelo usuário, juntando todos os elementos em um único array consolidado."
+  },
+  {
+    "id": "B048",
+    "name": "intersecao_listas",
+    "description": "Avalia duas listas e retorna um novo conjunto contendo unicamente os elementos que estão simultaneamente presentes em ambas."
+  },
+  {
+    "id": "B049",
+    "name": "diferenca_listas",
+    "description": "Faz a comparação de dois arrays e isola retornando apenas os elementos que constam na primeira lista mas estão ausentes na segunda."
+  },
+  {
+    "id": "B050",
+    "name": "agrupar_por_letra_inicial",
+    "description": "Categoriza um array de strings organizando-as em um objeto estruturado onde as chaves são as letras do alfabeto e os valores são as palavras que iniciam com aquela letra."
+  },
+  {
+    "id": "B051",
+    "name": "calcular_desconto_percentual",
+    "description": "Subtrai um valor percentual do preço base de um produto e exibe qual será o valor final a ser cobrado do cliente."
+  },
+  {
+    "id": "B052",
+    "name": "calcular_acrescimo_percentual",
+    "description": "Calcula a incidência de uma taxa percentual adicional sobre um montante numérico e retorna o valor total somado."
+  },
+  {
+    "id": "B053",
+    "name": "simular_parcelamento_sem_juros",
+    "description": "Divide uma quantia principal em partes iguais, baseado no número de parcelas desejadas, e retorna o valor de cada parcela sem acréscimo."
+  },
+  {
+    "id": "B054",
+    "name": "calcular_margem_lucro",
+    "description": "Determina a margem percentual real de lucro baseada na diferença entre o preço de custo de fabricação e o preço final de venda inseridos."
+  },
+  {
+    "id": "B055",
+    "name": "calcular_preco_venda",
+    "description": "Aplica uma taxa de markup (margem desejada) sobre o custo de produção para gerar e sugerir um preço de venda apropriado."
+  },
+  {
+    "id": "B056",
+    "name": "converter_taxa_anual_mensal",
+    "description": "Transforma uma taxa nominal de juros estipulada em formato anual para o seu equivalente proporcional aplicado em um único mês."
+  },
+  {
+    "id": "B057",
+    "name": "calcular_gorjeta",
+    "description": "Calcula rapidamente o montante devido para gratificação de serviço (gorjeta) multiplicando a porcentagem sugerida sobre o total da nota."
+  },
+  {
+    "id": "B058",
+    "name": "ratear_conta_restaurante",
+    "description": "Divide de forma perfeitamente igualitária o valor total da nota, já com os eventuais acréscimos, pela quantidade de pessoas dividindo a mesa."
+  },
+  {
+    "id": "B059",
+    "name": "calcular_comissao_venda",
+    "description": "Gera o valor financeiro direto devido a um representante de vendas multiplicando a sua taxa fixa de comissionamento pelo montante negociado."
+  },
+  {
+    "id": "B060",
+    "name": "calcular_roi_simples",
+    "description": "Executa o cálculo básico aritmético do Retorno sobre Investimento (ROI), utilizando os parâmetros de ganho obtido e custo do investimento inicial."
+  },
+  {
+    "id": "B061",
+    "name": "calcular_forca_fisica",
+    "description": "Aplica a Segunda Lei de Newton (Força = massa * aceleração) para encontrar a força em Newtons aplicada a um corpo."
+  },
+  {
+    "id": "B062",
+    "name": "calcular_energia_cinetica",
+    "description": "Usa as variáveis de massa de um corpo e sua respectiva velocidade atual para determinar o valor da sua energia cinética."
+  },
+  {
+    "id": "B063",
+    "name": "converter_velocidade_ms_kmh",
+    "description": "Converte a medida escalar de velocidade de metros por segundo multiplicando-a pelo fator 3.6 para encontrar os quilômetros por hora correspondentes."
+  },
+  {
+    "id": "B064",
+    "name": "calcular_densidade",
+    "description": "Executa a operação matemática dividindo a massa do elemento pelo seu volume espacial para encontrar o fator de densidade da matéria."
+  },
+  {
+    "id": "B065",
+    "name": "converter_pressao_atm_pascal",
+    "description": "Auxilia em exercícios de física convertendo uma medida de pressão padrão aferida em atmosferas (atm) para unidades de Pascal (Pa)."
+  },
+  {
+    "id": "B066",
+    "name": "calcular_resistencia_eletrica",
+    "description": "Faz uso da Lei de Ohm calculando a divisão entre a voltagem (tensão elétrica) e a amperagem (corrente) para extrair o valor da resistência."
+  },
+  {
+    "id": "B067",
+    "name": "calcular_potencia_eletrica",
+    "description": "Determina o valor em watts da potência dissipada através da multiplicação das grandezas de tensão (V) pela corrente elétrica (A)."
+  },
+  {
+    "id": "B068",
+    "name": "calcular_frequencia_onda",
+    "description": "Encontra a frequência hertziana de propagação ao realizar a razão matemática entre a velocidade da onda e seu respectivo comprimento de onda."
+  },
+  {
+    "id": "B069",
+    "name": "calcular_dilatacao_linear",
+    "description": "Calcula a expansão térmica sofrida por um sólido dadas as variáveis de comprimento inicial, coeficiente de dilatação e variação térmica do ambiente."
+  },
+  {
+    "id": "B070",
+    "name": "converter_energia_joules_calorias",
+    "description": "Converte unidades termodinâmicas pegando um valor inserido na métrica de Joules e o transformando no equivalente em Calorias."
+  },
+  {
+    "id": "B071",
+    "name": "converter_coordenadas_decimais",
+    "description": "Modifica o formato clássico de geolocalização contendo Graus, Minutos e Segundos (DMS) para uma única numeração de Graus Decimais (DD)."
+  },
+  {
+    "id": "B072",
+    "name": "estimar_tempo_viagem",
+    "description": "Faz a previsão simples de quanto tempo demorará um trajeto, baseando-se na distância total da rota e na velocidade média estimada do veículo."
+  },
+  {
+    "id": "B073",
+    "name": "converter_milhas_nauticas_km",
+    "description": "Auxilia cálculos náuticos convertendo medidas náuticas e marítimas de milhas para os quilômetros equivalentes da métrica terrestre."
+  },
+  {
+    "id": "B074",
+    "name": "calcular_fuso_diferenca",
+    "description": "Processa a subtração entre dois offsets diferentes da métrica Universal Time Coordinated (UTC) indicando a diferença de horas cheias entre duas regiões."
+  },
+  {
+    "id": "B075",
+    "name": "converter_nos_kmh",
+    "description": "Recebe o indicativo de velocidade de deslocamento aquático medido em Nós e multiplica pelo fator referencial para determinar a velocidade em Km/h."
+  },
+  {
+    "id": "B076",
+    "name": "calcular_escala_mapa",
+    "description": "Resolve proporções cartográficas recebendo a distância figurada em um plano (mapa) e o seu fator de escala multiplicador para relatar a quilometragem real."
+  },
+  {
+    "id": "B077",
+    "name": "converter_hectares_acres",
+    "description": "Facilita medições de topografia convertendo um valor inserido referente à extensão de lotes em hectares para a dimensão agrária dos acres."
+  },
+  {
+    "id": "B078",
+    "name": "calcular_densidade_demografica",
+    "description": "Faz o levantamento habitacional dividindo a estimativa do número total de pessoas de um município pela área total quadrada de extensão do seu território."
+  },
+  {
+    "id": "B079",
+    "name": "identificar_hemisferio",
+    "description": "Verifica matematicamente o sinal de um valor de latitude cartesiana (positivo ou negativo) indicando textualmente se o ponto localiza-se ao norte ou ao sul do Equador."
+  },
+  {
+    "id": "B080",
+    "name": "converter_pes_metros",
+    "description": "Faz a conversão aritmética padronizada de elevação e teto usada frequentemente na aviação, traduzindo um dado em pés para o sistema de métros lineares."
+  },
+  {
+    "id": "B081",
+    "name": "calcular_consumo_combustivel",
+    "description": "Tira a média aritmética da quilometragem por litro (Km/l) utilizando a distância percorrida pelo odômetro e os litros abastecidos na bomba."
+  },
+  {
+    "id": "B082",
+    "name": "estimar_custo_viagem_carro",
+    "description": "Cruza a estimativa de consumo médio do veículo, a quilometragem do passeio e o valor monetário atual do litro na bomba para prever gastos da estrada."
+  },
+  {
+    "id": "B083",
+    "name": "calcular_tinta_parede",
+    "description": "Multiplica as dimensões espaciais lineares das paredes de um cômodo estimando os litros recomendados da lata de tinta para uma cobertura satisfatória."
+  },
+  {
+    "id": "B084",
+    "name": "converter_xicaras_mililitros",
+    "description": "Transforma a medida americana e popular do volume das xícaras padronizadas culinárias na equivalente precisão quantitativa de mililitros."
+  },
+  {
+    "id": "B085",
+    "name": "converter_colheres_sopa_gramas",
+    "description": "Fornece um balizador culinário médio aproximado para converter frações ditas de colheres de sopa e de chá pesadas nos gramas respectivos de ingredientes secos."
+  },
+  {
+    "id": "B086",
+    "name": "calcular_consumo_kwh_eletrodomestico",
+    "description": "Utiliza a etiqueta da potência de um eletrodoméstico e a carga horária em que ele fica ligado para deduzir o impacto no montante de kWh mensal cobrado."
+  },
+  {
+    "id": "B087",
+    "name": "estimar_agua_plantas",
+    "description": "Fornece uma rotina geradora de indicação aproximada dos mililitros ideais para regar folhagens domésticas com base nas variáveis do tamanho do cachepô."
+  },
+  {
+    "id": "B088",
+    "name": "calcular_tamanho_tv_distancia",
+    "description": "Formula conselhos ergonômicos sugerindo a métrica mínima e a ideal em que os móveis da sala devem ser espaçados em função das polegadas diagonais da tela."
+  },
+  {
+    "id": "B089",
+    "name": "calcular_quantidade_carne_churrasco",
+    "description": "Produz a soma do peso de suprimentos necessários baseando-se no número referenciado de adultos presentes e estipulando frações padrões seguras por prato."
+  },
+  {
+    "id": "B090",
+    "name": "converter_temperatura_forno",
+    "description": "Traduz e adequa os registros constantes no botão dial de fornos internacionais (em Fahrenheit) para graus de temperatura baseados no termômetro habitual do usuário."
+  },
+  {
+    "id": "B091",
+    "name": "gerar_senha_temporaria",
+    "description": "Cria de forma não-complexa uma curta cadeia de strings mescladas e legíveis de letras e algarismos para uso passageiro no preenchimento visual de formulários mockup."
+  },
+  {
+    "id": "B092",
+    "name": "gerar_nome_usuario_aleatorio",
+    "description": "Faz a interpolação benigna combinando referências a dicionários simples de cores e referências a mamíferos de maneira randômica para montar identificações seguras amigáveis."
+  },
+  {
+    "id": "B093",
+    "name": "formatar_citacao_bibliografica_basica",
+    "description": "Ajusta strings desorganizadas recebendo autoria e as emparelha em template formatado, inserindo os pontos, sobrenomes destacados em maiúsculas e anos nos locais convenientes."
+  },
+  {
+    "id": "B094",
+    "name": "gerar_slug_url",
+    "description": "Trabalha uma frase fornecida removendo caracteres inapropriados e acentuações, substituindo hiatos por barras de traço hifenizado e adequando tudo em caixa baixa preparadas para hiperlinks."
+  },
+  {
+    "id": "B095",
+    "name": "criar_iniciais_avatar",
+    "description": "Faz a varredura da primeira palavra e da última do nome registrado visando apenas destacar as primeiras letras em formato condensado maiúsculo como suporte a avatares placeholder."
+  },
+  {
+    "id": "B096",
+    "name": "truncar_texto_longo",
+    "description": "Modera linhas extensas no padrão UI forçando cortes de string na casa dos caracteres estipulada via parâmetro numérico acrescentando sequências simbólicas de três pontinhos na omissão."
+  },
+  {
+    "id": "B097",
+    "name": "padronizar_nome_proprio",
+    "description": "Altera desvios de preenchimento desarrumados garantindo que sobrenomes fiquem sem erros como travamentos de Caps Lock (CAps lOCK) respeitando as letras maiúsculas exclusivas de início gramatical."
+  },
+  {
+    "id": "B098",
+    "name": "gerar_numero_pedido",
+    "description": "Junta a métrica estrutural do ano vigente (YYYY) somado a um randomizador de quatro inteiros construindo em um bloco sintético rápido referências rastreáveis fantasias de e-commerce fictício."
+  },
+  {
+    "id": "B099",
+    "name": "ofuscar_email_visualizacao",
+    "description": "Age transformando uma string de e-mail ao tapar as parcelas médias em sequências com pequenos asteriscos salvaguardando a impressão final sem ofuscar as três letras iniciais para painéis UX seguros."
+  },
+  {
+    "id": "B100",
+    "name": "criar_mensagem_boas_vindas",
+    "description": "Constroi blocos interativos pegando as literais de identificação nominais para produzir e costurar num preenchimento automatizado mensagens simples com 'Olá [nome do indivíduo]' para rodar na abertura de uma sessão trivial."
+  }
+]

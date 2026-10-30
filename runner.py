@@ -20,8 +20,8 @@ SAIDAS_DIR = BASE_DIR / "saidas"
 # ------------------------------------------------------------
 
 # INPUT_SET = "portugues_acentuado"
-# INPUT_SET = "portugues_sem_acento"
-INPUT_SET = "ingles"
+INPUT_SET = "portugues_sem_acento"
+# INPUT_SET = "ingles"
 
 # Para executar TODOS:
 #
